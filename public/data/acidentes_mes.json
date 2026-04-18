@@ -1,0 +1,650 @@
+[
+    {
+        "ano": "2025",
+        "mes": "Janeiro",
+        "acidentes": "2844",
+        "mortos": "36",
+        "feridos_graves": "161",
+        "feridos_leves": "3337",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Fevereiro",
+        "acidentes": "2523",
+        "mortos": "29",
+        "feridos_graves": "183",
+        "feridos_leves": "2931",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Março",
+        "acidentes": "2909",
+        "mortos": "25",
+        "feridos_graves": "186",
+        "feridos_leves": "3381",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Abril",
+        "acidentes": "3013",
+        "mortos": "27",
+        "feridos_graves": "217",
+        "feridos_leves": "3652",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Maio",
+        "acidentes": "3381",
+        "mortos": "35",
+        "feridos_graves": "247",
+        "feridos_leves": "3906",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Junho",
+        "acidentes": "3386",
+        "mortos": "48",
+        "feridos_graves": "281",
+        "feridos_leves": "3951",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Julho",
+        "acidentes": "3881",
+        "mortos": "52",
+        "feridos_graves": "306",
+        "feridos_leves": "4548",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Agosto",
+        "acidentes": "3537",
+        "mortos": "61",
+        "feridos_graves": "307",
+        "feridos_leves": "4221",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Setembro",
+        "acidentes": "3501",
+        "mortos": "24",
+        "feridos_graves": "273",
+        "feridos_leves": "4049",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Outubro",
+        "acidentes": "0",
+        "mortos": "0",
+        "feridos_graves": "0",
+        "feridos_leves": "0",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Novembro",
+        "acidentes": "0",
+        "mortos": "0",
+        "feridos_graves": "0",
+        "feridos_leves": "0",
+        "": ""
+    },
+    {
+        "ano": "2025",
+        "mes": "Dezembro",
+        "acidentes": "0",
+        "mortos": "0",
+        "feridos_graves": "0",
+        "feridos_leves": "0",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Janeiro",
+        "acidentes": "2672",
+        "mortos": "34",
+        "feridos_graves": "179",
+        "feridos_leves": "3108",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Fevereiro",
+        "acidentes": "2616",
+        "mortos": "36",
+        "feridos_graves": "172",
+        "feridos_leves": "3075",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Março",
+        "acidentes": "2649",
+        "mortos": "33",
+        "feridos_graves": "166",
+        "feridos_leves": "3094",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Abril",
+        "acidentes": "2935",
+        "mortos": "32",
+        "feridos_graves": "217",
+        "feridos_leves": "3367",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Maio",
+        "acidentes": "3194",
+        "mortos": "44",
+        "feridos_graves": "224",
+        "feridos_leves": "3714",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Junho",
+        "acidentes": "3104",
+        "mortos": "36",
+        "feridos_graves": "230",
+        "feridos_leves": "3632",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Julho",
+        "acidentes": "3407",
+        "mortos": "52",
+        "feridos_graves": "267",
+        "feridos_leves": "3971",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Agosto",
+        "acidentes": "3221",
+        "mortos": "49",
+        "feridos_graves": "269",
+        "feridos_leves": "3879",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Setembro",
+        "acidentes": "3198",
+        "mortos": "44",
+        "feridos_graves": "233",
+        "feridos_leves": "3783",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Outubro",
+        "acidentes": "3218",
+        "mortos": "32",
+        "feridos_graves": "199",
+        "feridos_leves": "3843",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Novembro",
+        "acidentes": "2964",
+        "mortos": "31",
+        "feridos_graves": "206",
+        "feridos_leves": "3520",
+        "": ""
+    },
+    {
+        "ano": "2024",
+        "mes": "Dezembro",
+        "acidentes": "3160",
+        "mortos": "40",
+        "feridos_graves": "214",
+        "feridos_leves": "3697",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Janeiro",
+        "acidentes": "2668",
+        "mortos": "42",
+        "feridos_graves": "171",
+        "feridos_leves": "3127",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Fevereiro",
+        "acidentes": "2314",
+        "mortos": "28",
+        "feridos_graves": "158",
+        "feridos_leves": "2676",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Março",
+        "acidentes": "2685",
+        "mortos": "31",
+        "feridos_graves": "167",
+        "feridos_leves": "3114",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Abril",
+        "acidentes": "2848",
+        "mortos": "53",
+        "feridos_graves": "221",
+        "feridos_leves": "3354",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Maio",
+        "acidentes": "3016",
+        "mortos": "34",
+        "feridos_graves": "181",
+        "feridos_leves": "3472",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Junho",
+        "acidentes": "3052",
+        "mortos": "45",
+        "feridos_graves": "230",
+        "feridos_leves": "3532",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Julho",
+        "acidentes": "3352",
+        "mortos": "47",
+        "feridos_graves": "274",
+        "feridos_leves": "4016",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Agosto",
+        "acidentes": "3382",
+        "mortos": "41",
+        "feridos_graves": "280",
+        "feridos_leves": "4073",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Setembro",
+        "acidentes": "3076",
+        "mortos": "51",
+        "feridos_graves": "203",
+        "feridos_leves": "3645",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Outubro",
+        "acidentes": "3015",
+        "mortos": "38",
+        "feridos_graves": "191",
+        "feridos_leves": "3499",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Novembro",
+        "acidentes": "2824",
+        "mortos": "21",
+        "feridos_graves": "170",
+        "feridos_leves": "3318",
+        "": ""
+    },
+    {
+        "ano": "2023",
+        "mes": "Dezembro",
+        "acidentes": "2742",
+        "mortos": "36",
+        "feridos_graves": "191",
+        "feridos_leves": "3232",
+        "": "20/19"
+    },
+    {
+        "ano": "2022",
+        "mes": "Janeiro",
+        "acidentes": "2334",
+        "mortos": "51",
+        "feridos_graves": "175",
+        "feridos_leves": "2654",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Fevereiro",
+        "acidentes": "2311",
+        "mortos": "37",
+        "feridos_graves": "152",
+        "feridos_leves": "2656",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Março",
+        "acidentes": "2460",
+        "mortos": "42",
+        "feridos_graves": "163",
+        "feridos_leves": "2869",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Abril",
+        "acidentes": "2648",
+        "mortos": "34",
+        "feridos_graves": "179",
+        "feridos_leves": "3108",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Maio",
+        "acidentes": "3101",
+        "mortos": "67",
+        "feridos_graves": "244",
+        "feridos_leves": "3614",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Junho",
+        "acidentes": "2876",
+        "mortos": "49",
+        "feridos_graves": "187",
+        "feridos_leves": "3391",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Julho",
+        "acidentes": "3418",
+        "mortos": "55",
+        "feridos_graves": "247",
+        "feridos_leves": "4002",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Agosto",
+        "acidentes": "3342",
+        "mortos": "76",
+        "feridos_graves": "253",
+        "feridos_leves": "4092",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Setembro",
+        "acidentes": "3180",
+        "mortos": "53",
+        "feridos_graves": "216",
+        "feridos_leves": "3718",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Outubro",
+        "acidentes": "3035",
+        "mortos": "52",
+        "feridos_graves": "177",
+        "feridos_leves": "3524",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Novembro",
+        "acidentes": "2888",
+        "mortos": "45",
+        "feridos_graves": "152",
+        "feridos_leves": "3358",
+        "": ""
+    },
+    {
+        "ano": "2022",
+        "mes": "Dezembro",
+        "acidentes": "2683",
+        "mortos": "57",
+        "feridos_graves": "157",
+        "feridos_leves": "3128",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Janeiro",
+        "acidentes": "1698",
+        "mortos": "34",
+        "feridos_graves": "103",
+        "feridos_leves": "1905",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Fevereiro",
+        "acidentes": "1184",
+        "mortos": "17",
+        "feridos_graves": "73",
+        "feridos_leves": "1296",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Março",
+        "acidentes": "1844",
+        "mortos": "31",
+        "feridos_graves": "135",
+        "feridos_leves": "2086",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Abril",
+        "acidentes": "2229",
+        "mortos": "30",
+        "feridos_graves": "159",
+        "feridos_leves": "2545",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Maio",
+        "acidentes": "2782",
+        "mortos": "55",
+        "feridos_graves": "193",
+        "feridos_leves": "3267",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Junho",
+        "acidentes": "2863",
+        "mortos": "48",
+        "feridos_graves": "213",
+        "feridos_leves": "3344",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Julho",
+        "acidentes": "3032",
+        "mortos": "62",
+        "feridos_graves": "213",
+        "feridos_leves": "3620",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Agosto",
+        "acidentes": "3185",
+        "mortos": "68",
+        "feridos_graves": "228",
+        "feridos_leves": "3880",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Setembro",
+        "acidentes": "2944",
+        "mortos": "60",
+        "feridos_graves": "231",
+        "feridos_leves": "3454",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Outubro",
+        "acidentes": "3259",
+        "mortos": "57",
+        "feridos_graves": "224",
+        "feridos_leves": "3797",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Novembro",
+        "acidentes": "2879",
+        "mortos": "52",
+        "feridos_graves": "195",
+        "feridos_leves": "3340",
+        "": ""
+    },
+    {
+        "ano": "2021",
+        "mes": "Dezembro",
+        "acidentes": "2792",
+        "mortos": "47",
+        "feridos_graves": "194",
+        "feridos_leves": "3319",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Janeiro",
+        "acidentes": "2657",
+        "mortos": "30",
+        "feridos_graves": "132",
+        "feridos_leves": "3198",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Fevereiro",
+        "acidentes": "2434",
+        "mortos": "23",
+        "feridos_graves": "174",
+        "feridos_leves": "2924",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Março",
+        "acidentes": "1670",
+        "mortos": "14",
+        "feridos_graves": "100",
+        "feridos_leves": "2614",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Abril",
+        "acidentes": "882",
+        "mortos": "18",
+        "feridos_graves": "62",
+        "feridos_leves": "956",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Maio",
+        "acidentes": "1741",
+        "mortos": "28",
+        "feridos_graves": "155",
+        "feridos_leves": "1183",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Junho",
+        "acidentes": "2140",
+        "mortos": "41",
+        "feridos_graves": "156",
+        "feridos_leves": "2452",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Julho",
+        "acidentes": "2727",
+        "mortos": "48",
+        "feridos_graves": "212",
+        "feridos_leves": "3153",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Agosto",
+        "acidentes": "2745",
+        "mortos": "43",
+        "feridos_graves": "212",
+        "feridos_leves": "3266",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Setembro",
+        "acidentes": "2562",
+        "mortos": "46",
+        "feridos_graves": "176",
+        "feridos_leves": "2986",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Outubro",
+        "acidentes": "2865",
+        "mortos": "37",
+        "feridos_graves": "176",
+        "feridos_leves": "3123",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Novembro",
+        "acidentes": "2146",
+        "mortos": "22",
+        "feridos_graves": "136",
+        "feridos_leves": "2452",
+        "": ""
+    },
+    {
+        "ano": "2020",
+        "mes": "Dezembro",
+        "acidentes": "2319",
+        "mortos": "26",
+        "feridos_graves": "158",
+        "feridos_leves": "2670",
+        "": ""
+    }
+]

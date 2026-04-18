@@ -1,0 +1,866 @@
+[
+    {
+        "ano": "2025",
+        "distrito": "Aveiro",
+        "acidentes": "2184",
+        "mortos": "28",
+        "feridos_graves": "118",
+        "feridos_leves": "2500"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Beja",
+        "acidentes": "395",
+        "mortos": "15",
+        "feridos_graves": "76",
+        "feridos_leves": "475"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Braga",
+        "acidentes": "2578",
+        "mortos": "21",
+        "feridos_graves": "152",
+        "feridos_leves": "3090"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Bragança",
+        "acidentes": "309",
+        "mortos": "14",
+        "feridos_graves": "53",
+        "feridos_leves": "330"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Castelo Branco",
+        "acidentes": "419",
+        "mortos": "11",
+        "feridos_graves": "66",
+        "feridos_leves": "495"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Coimbra",
+        "acidentes": "1276",
+        "mortos": "17",
+        "feridos_graves": "78",
+        "feridos_leves": "1500"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Évora",
+        "acidentes": "338",
+        "mortos": "7",
+        "feridos_graves": "53",
+        "feridos_leves": "386"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Faro",
+        "acidentes": "1771",
+        "mortos": "25",
+        "feridos_graves": "168",
+        "feridos_leves": "1996"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Guarda",
+        "acidentes": "322",
+        "mortos": "5",
+        "feridos_graves": "24",
+        "feridos_leves": "381"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Leiria",
+        "acidentes": "1452",
+        "mortos": "19",
+        "feridos_graves": "139",
+        "feridos_leves": "1670"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Lisboa",
+        "acidentes": "5923",
+        "mortos": "38",
+        "feridos_graves": "284",
+        "feridos_leves": "6978"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Portalegre",
+        "acidentes": "267",
+        "mortos": "12",
+        "feridos_graves": "80",
+        "feridos_leves": "279"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Porto",
+        "acidentes": "4722",
+        "mortos": "37",
+        "feridos_graves": "158",
+        "feridos_leves": "5578"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Santarém",
+        "acidentes": "1266",
+        "mortos": "24",
+        "feridos_graves": "187",
+        "feridos_leves": "1521"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Setúbal",
+        "acidentes": "2159",
+        "mortos": "28",
+        "feridos_graves": "174",
+        "feridos_leves": "2563"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Viana do Castelo",
+        "acidentes": "685",
+        "mortos": "12",
+        "feridos_graves": "48",
+        "feridos_leves": "817"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Vila Real",
+        "acidentes": "511",
+        "mortos": "7",
+        "feridos_graves": "48",
+        "feridos_leves": "614"
+    },
+    {
+        "ano": "2025",
+        "distrito": "Viseu",
+        "acidentes": "1104",
+        "mortos": "10",
+        "feridos_graves": "90",
+        "feridos_leves": "1310"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Aveiro",
+        "acidentes": "499",
+        "mortos": "4",
+        "feridos_graves": "98",
+        "feridos_leves": "577"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Beja",
+        "acidentes": "795",
+        "mortos": "3",
+        "feridos_graves": "67",
+        "feridos_leves": "916"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Braga",
+        "acidentes": "3312",
+        "mortos": "40",
+        "feridos_graves": "223",
+        "feridos_leves": "4029"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Bragança",
+        "acidentes": "393",
+        "mortos": "9",
+        "feridos_graves": "49",
+        "feridos_leves": "469"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Castelo Branco",
+        "acidentes": "547",
+        "mortos": "12",
+        "feridos_graves": "66",
+        "feridos_leves": "616"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Coimbra",
+        "acidentes": "1635",
+        "mortos": "25",
+        "feridos_graves": "110",
+        "feridos_leves": "1897"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Évora",
+        "acidentes": "515",
+        "mortos": "10",
+        "feridos_graves": "74",
+        "feridos_leves": "591"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Faro",
+        "acidentes": "2363",
+        "mortos": "35",
+        "feridos_graves": "207",
+        "feridos_leves": "2606"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Guarda",
+        "acidentes": "480",
+        "mortos": "16",
+        "feridos_graves": "50",
+        "feridos_leves": "559"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Leiria",
+        "acidentes": "1857",
+        "mortos": "36",
+        "feridos_graves": "185",
+        "feridos_leves": "2121"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Lisboa",
+        "acidentes": "7694",
+        "mortos": "58",
+        "feridos_graves": "330",
+        "feridos_leves": "9036"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Portalegre",
+        "acidentes": "326",
+        "mortos": "9",
+        "feridos_graves": "64",
+        "feridos_leves": "364"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Porto",
+        "acidentes": "6384",
+        "mortos": "55",
+        "feridos_graves": "237",
+        "feridos_leves": "7611"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Santarém",
+        "acidentes": "1656",
+        "mortos": "30",
+        "feridos_graves": "214",
+        "feridos_leves": "1926"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Setúbal",
+        "acidentes": "2724",
+        "mortos": "31",
+        "feridos_graves": "206",
+        "feridos_leves": "3272"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Viana do Castelo",
+        "acidentes": "945",
+        "mortos": "13",
+        "feridos_graves": "73",
+        "feridos_leves": "1143"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Vila Real",
+        "acidentes": "668",
+        "mortos": "11",
+        "feridos_graves": "59",
+        "feridos_leves": "795"
+    },
+    {
+        "ano": "2024",
+        "distrito": "Viseu",
+        "acidentes": "1421",
+        "mortos": "21",
+        "feridos_graves": "119",
+        "feridos_leves": "1684"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Aveiro",
+        "acidentes": "2868",
+        "mortos": "33",
+        "feridos_graves": "200",
+        "feridos_leves": "3338"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Beja",
+        "acidentes": "486",
+        "mortos": "26",
+        "feridos_graves": "85",
+        "feridos_leves": "570"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Braga",
+        "acidentes": "3291",
+        "mortos": "35",
+        "feridos_graves": "193",
+        "feridos_leves": "3954"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Bragança",
+        "acidentes": "394",
+        "mortos": "3",
+        "feridos_graves": "50",
+        "feridos_leves": "473"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Castelo Branco",
+        "acidentes": "565",
+        "mortos": "20",
+        "feridos_graves": "76",
+        "feridos_leves": "660"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Coimbra",
+        "acidentes": "1601",
+        "mortos": "23",
+        "feridos_graves": "94",
+        "feridos_leves": "1857"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Évora",
+        "acidentes": "458",
+        "mortos": "10",
+        "feridos_graves": "78",
+        "feridos_leves": "532"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Faro",
+        "acidentes": "2149",
+        "mortos": "32",
+        "feridos_graves": "193",
+        "feridos_leves": "2403"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Guarda",
+        "acidentes": "440",
+        "mortos": "11",
+        "feridos_graves": "54",
+        "feridos_leves": "527"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Leiria",
+        "acidentes": "1802",
+        "mortos": "32",
+        "feridos_graves": "157",
+        "feridos_leves": "2117"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Lisboa",
+        "acidentes": "7245",
+        "mortos": "45",
+        "feridos_graves": "311",
+        "feridos_leves": "8459"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Portalegre",
+        "acidentes": "331",
+        "mortos": "16",
+        "feridos_graves": "44",
+        "feridos_leves": "389"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Porto",
+        "acidentes": "6108",
+        "mortos": "50",
+        "feridos_graves": "225",
+        "feridos_leves": "7265"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Santarém",
+        "acidentes": "1593",
+        "mortos": "30",
+        "feridos_graves": "229",
+        "feridos_leves": "1792"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Setúbal",
+        "acidentes": "2777",
+        "mortos": "50",
+        "feridos_graves": "200",
+        "feridos_leves": "3335"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Viana Castelo",
+        "acidentes": "843",
+        "mortos": "17",
+        "feridos_graves": "74",
+        "feridos_leves": "1003"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Vila Real",
+        "acidentes": "665",
+        "mortos": "19",
+        "feridos_graves": "64",
+        "feridos_leves": "778"
+    },
+    {
+        "ano": "2023",
+        "distrito": "Viseu",
+        "acidentes": "1358",
+        "mortos": "15",
+        "feridos_graves": "110",
+        "feridos_leves": "1606"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Aveiro",
+        "acidentes": "2646",
+        "mortos": "40",
+        "feridos_graves": "170",
+        "feridos_leves": "3127"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Beja",
+        "acidentes": "455",
+        "mortos": "22",
+        "feridos_graves": "63",
+        "feridos_leves": "527"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Braga",
+        "acidentes": "2995",
+        "mortos": "42",
+        "feridos_graves": "128",
+        "feridos_leves": "3618"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Bragança",
+        "acidentes": "377",
+        "mortos": "11",
+        "feridos_graves": "51",
+        "feridos_leves": "433"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Castelo Branco",
+        "acidentes": "517",
+        "mortos": "14",
+        "feridos_graves": "42",
+        "feridos_leves": "611"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Coimbra",
+        "acidentes": "1652",
+        "mortos": "34",
+        "feridos_graves": "93",
+        "feridos_leves": "1931"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Évora",
+        "acidentes": "441",
+        "mortos": "19",
+        "feridos_graves": "53",
+        "feridos_leves": "500"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Faro",
+        "acidentes": "2035",
+        "mortos": "45",
+        "feridos_graves": "167",
+        "feridos_leves": "2289"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Guarda",
+        "acidentes": "420",
+        "mortos": "12",
+        "feridos_graves": "55",
+        "feridos_leves": "497"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Leiria",
+        "acidentes": "1626",
+        "mortos": "43",
+        "feridos_graves": "112",
+        "feridos_leves": "1908"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Lisboa",
+        "acidentes": "6835",
+        "mortos": "75",
+        "feridos_graves": "282",
+        "feridos_leves": "7936"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Portalegre",
+        "acidentes": "284",
+        "mortos": "13",
+        "feridos_graves": "59",
+        "feridos_leves": "314"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Porto",
+        "acidentes": "5719",
+        "mortos": "54",
+        "feridos_graves": "221",
+        "feridos_leves": "6726"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Santarém",
+        "acidentes": "1459",
+        "mortos": "37",
+        "feridos_graves": "221",
+        "feridos_leves": "1693"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Setúbal",
+        "acidentes": "2526",
+        "mortos": "55",
+        "feridos_graves": "200",
+        "feridos_leves": "2987"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Viana do Castelo",
+        "acidentes": "829",
+        "mortos": "18",
+        "feridos_graves": "64",
+        "feridos_leves": "1007"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Vila Real",
+        "acidentes": "665",
+        "mortos": "22",
+        "feridos_graves": "56",
+        "feridos_leves": "808"
+    },
+    {
+        "ano": "2022",
+        "distrito": "Viseu",
+        "acidentes": "1307",
+        "mortos": "35",
+        "feridos_graves": "87",
+        "feridos_leves": "1534"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Aveiro",
+        "acidentes": "2387",
+        "mortos": "43",
+        "feridos_graves": "147",
+        "feridos_leves": "2762"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Beja",
+        "acidentes": "393",
+        "mortos": "19",
+        "feridos_graves": "78",
+        "feridos_leves": "451"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Braga",
+        "acidentes": "2767",
+        "mortos": "45",
+        "feridos_graves": "173",
+        "feridos_leves": "3321"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Bragança",
+        "acidentes": "339",
+        "mortos": "15",
+        "feridos_graves": "45",
+        "feridos_leves": "363"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Castelo Branco",
+        "acidentes": "468",
+        "mortos": "11",
+        "feridos_graves": "63",
+        "feridos_leves": "524"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Coimbra",
+        "acidentes": "1417",
+        "mortos": "21",
+        "feridos_graves": "76",
+        "feridos_leves": "1654"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Évora",
+        "acidentes": "391",
+        "mortos": "13",
+        "feridos_graves": "54",
+        "feridos_leves": "443"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Faro",
+        "acidentes": "1688",
+        "mortos": "36",
+        "feridos_graves": "165",
+        "feridos_leves": "1827"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Guarda",
+        "acidentes": "357",
+        "mortos": "9",
+        "feridos_graves": "31",
+        "feridos_leves": "400"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Leiria",
+        "acidentes": "1448",
+        "mortos": "41",
+        "feridos_graves": "125",
+        "feridos_leves": "1671"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Lisboa",
+        "acidentes": "6245",
+        "mortos": "86",
+        "feridos_graves": "287",
+        "feridos_leves": "7219"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Portalegre",
+        "acidentes": "281",
+        "mortos": "9",
+        "feridos_graves": "50",
+        "feridos_leves": "294"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Porto",
+        "acidentes": "5119",
+        "mortos": "51",
+        "feridos_graves": "154",
+        "feridos_leves": "6164"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Santarém",
+        "acidentes": "1319",
+        "mortos": "34",
+        "feridos_graves": "185",
+        "feridos_leves": "1535"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Setúbal",
+        "acidentes": "2259",
+        "mortos": "45",
+        "feridos_graves": "157",
+        "feridos_leves": "2724"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Viana do Castelo",
+        "acidentes": "680",
+        "mortos": "23",
+        "feridos_graves": "69",
+        "feridos_leves": "799"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Vila Real",
+        "acidentes": "558",
+        "mortos": "12",
+        "feridos_graves": "47",
+        "feridos_leves": "683"
+    },
+    {
+        "ano": "2021",
+        "distrito": "Viseu",
+        "acidentes": "1101",
+        "mortos": "19",
+        "feridos_graves": "81",
+        "feridos_leves": "1360"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Aveiro",
+        "acidentes": "2126",
+        "mortos": "22",
+        "feridos_graves": "120",
+        "feridos_leves": "2466"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Beja",
+        "acidentes": "372",
+        "mortos": "15",
+        "feridos_graves": "78",
+        "feridos_leves": "428"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Braga",
+        "acidentes": "2463",
+        "mortos": "24",
+        "feridos_graves": "131",
+        "feridos_leves": "2915"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Bragança",
+        "acidentes": "463",
+        "mortos": "10",
+        "feridos_graves": "79",
+        "feridos_leves": "392"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Castelo Branco",
+        "acidentes": "462",
+        "mortos": "11",
+        "feridos_graves": "85",
+        "feridos_leves": "492"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Coimbra",
+        "acidentes": "1236",
+        "mortos": "19",
+        "feridos_graves": "94",
+        "feridos_leves": "1444"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Évora",
+        "acidentes": "328",
+        "mortos": "10",
+        "feridos_graves": "46",
+        "feridos_leves": "393"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Faro",
+        "acidentes": "1546",
+        "mortos": "26",
+        "feridos_graves": "159",
+        "feridos_leves": "1933"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Guarda",
+        "acidentes": "342",
+        "mortos": "13",
+        "feridos_graves": "26",
+        "feridos_leves": "453"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Leiria",
+        "acidentes": "1283",
+        "mortos": "29",
+        "feridos_graves": "88",
+        "feridos_leves": "1483"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Lisboa",
+        "acidentes": "4290",
+        "mortos": "54",
+        "feridos_graves": "254",
+        "feridos_leves": "5633"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Portalegre",
+        "acidentes": "241",
+        "mortos": "12",
+        "feridos_graves": "45",
+        "feridos_leves": "281"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Porto",
+        "acidentes": "4629",
+        "mortos": "54",
+        "feridos_graves": "157",
+        "feridos_leves": "5836"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Santarém",
+        "acidentes": "1185",
+        "mortos": "26",
+        "feridos_graves": "113",
+        "feridos_leves": "1385"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Setúbal",
+        "acidentes": "2049",
+        "mortos": "27",
+        "feridos_graves": "144",
+        "feridos_leves": "2380"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Viana do Castelo",
+        "acidentes": "635",
+        "mortos": "12",
+        "feridos_graves": "62",
+        "feridos_leves": "809"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Vila Real",
+        "acidentes": "532",
+        "mortos": "10",
+        "feridos_graves": "47",
+        "feridos_leves": "650"
+    },
+    {
+        "ano": "2020",
+        "distrito": "Viseu",
+        "acidentes": "1047",
+        "mortos": "14",
+        "feridos_graves": "90",
+        "feridos_leves": "1158"
+    }
+]
