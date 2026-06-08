@@ -1,0 +1,146 @@
+[
+    {
+        "ano": "2025",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "3535",
+        "mortos": "27",
+        "feridos_graves": "277",
+        "feridos_leves": "3535"
+    },
+    {
+        "ano": "2025",
+        "tipo_acidente": "Colisão",
+        "acidentes": "15581",
+        "mortos": "157",
+        "feridos_graves": "1032",
+        "feridos_leves": "19708"
+    },
+    {
+        "ano": "2025",
+        "tipo_acidente": "Despiste",
+        "acidentes": "9859",
+        "mortos": "153",
+        "feridos_graves": "852",
+        "feridos_leves": "10733"
+    },
+    {
+        "ano": "2024",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "4862",
+        "mortos": "66",
+        "feridos_graves": "410",
+        "feridos_leves": "4832"
+    },
+    {
+        "ano": "2024",
+        "tipo_acidente": "Colisão",
+        "acidentes": "19474",
+        "mortos": "192",
+        "feridos_graves": "1200",
+        "feridos_leves": "24935"
+    },
+    {
+        "ano": "2024",
+        "tipo_acidente": "Despiste",
+        "acidentes": "12002",
+        "mortos": "205",
+        "feridos_graves": "966",
+        "feridos_leves": "12916"
+    },
+    {
+        "ano": "2023",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "4654",
+        "mortos": "55",
+        "feridos_graves": "358",
+        "feridos_leves": "4593"
+    },
+    {
+        "ano": "2023",
+        "tipo_acidente": "Colisão",
+        "acidentes": "18447",
+        "mortos": "191",
+        "feridos_graves": "1119",
+        "feridos_leves": "23584"
+    },
+    {
+        "ano": "2023",
+        "tipo_acidente": "Despiste",
+        "acidentes": "11873",
+        "mortos": "221",
+        "feridos_graves": "960",
+        "feridos_leves": "12881"
+    },
+    {
+        "ano": "2022",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "4682",
+        "mortos": "105",
+        "feridos_graves": "346",
+        "feridos_leves": "4597"
+    },
+    {
+        "ano": "2022",
+        "tipo_acidente": "Colisão",
+        "acidentes": "17722",
+        "mortos": "254",
+        "feridos_graves": "996",
+        "feridos_leves": "22622"
+    },
+    {
+        "ano": "2022",
+        "tipo_acidente": "Despiste",
+        "acidentes": "11872",
+        "mortos": "259",
+        "feridos_graves": "960",
+        "feridos_leves": "12895"
+    },
+    {
+        "ano": "2021",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "3905",
+        "mortos": "96",
+        "feridos_graves": "298",
+        "feridos_leves": "3836"
+    },
+    {
+        "ano": "2021",
+        "tipo_acidente": "Colisão",
+        "acidentes": "16193",
+        "mortos": "221",
+        "feridos_graves": "952",
+        "feridos_leves": "20591"
+    },
+    {
+        "ano": "2021",
+        "tipo_acidente": "Despiste",
+        "acidentes": "10593",
+        "mortos": "244",
+        "feridos_graves": "911",
+        "feridos_leves": "11426"
+    },
+    {
+        "ano": "2020",
+        "tipo_acidente": "Atropelamento",
+        "acidentes": "3528",
+        "mortos": "59",
+        "feridos_graves": "290",
+        "feridos_leves": "3441"
+    },
+    {
+        "ano": "2020",
+        "tipo_acidente": "Colisão",
+        "acidentes": "13541",
+        "mortos": "152",
+        "feridos_graves": "797",
+        "feridos_leves": "17125"
+    },
+    {
+        "ano": "2020",
+        "tipo_acidente": "Despiste",
+        "acidentes": "9432",
+        "mortos": "179",
+        "feridos_graves": "742",
+        "feridos_leves": "10140"
+    }
+]

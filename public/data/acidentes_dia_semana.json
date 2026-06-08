@@ -1,0 +1,338 @@
+[
+    {
+        "ano": "2025",
+        "dia_semana": "Segunda",
+        "acidentes": "4261",
+        "mortos": "37",
+        "feridos_graves": "288",
+        "feridos_leves": "4964"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Terça",
+        "acidentes": "4088",
+        "mortos": "38",
+        "feridos_graves": "279",
+        "feridos_leves": "4748"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Quarta",
+        "acidentes": "4271",
+        "mortos": "45",
+        "feridos_graves": "269",
+        "feridos_leves": "4927"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Quinta",
+        "acidentes": "4118",
+        "mortos": "42",
+        "feridos_graves": "246",
+        "feridos_leves": "4802"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Sexta",
+        "acidentes": "4493",
+        "mortos": "45",
+        "feridos_graves": "340",
+        "feridos_leves": "5218"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Sábado",
+        "acidentes": "4050",
+        "mortos": "80",
+        "feridos_graves": "389",
+        "feridos_leves": "4776"
+    },
+    {
+        "ano": "2025",
+        "dia_semana": "Domingo",
+        "acidentes": "3694",
+        "mortos": "50",
+        "feridos_graves": "350",
+        "feridos_leves": "4541"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Segunda",
+        "acidentes": "5251",
+        "mortos": "42",
+        "feridos_graves": "346",
+        "feridos_leves": "6096"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Terça",
+        "acidentes": "5349",
+        "mortos": "58",
+        "feridos_graves": "341",
+        "feridos_leves": "6228"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Quarta",
+        "acidentes": "5359",
+        "mortos": "57",
+        "feridos_graves": "353",
+        "feridos_leves": "6130"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Quinta",
+        "acidentes": "5185",
+        "mortos": "61",
+        "feridos_graves": "291",
+        "feridos_leves": "6047"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Sexta",
+        "acidentes": "5713",
+        "mortos": "77",
+        "feridos_graves": "389",
+        "feridos_leves": "6647"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Sábado",
+        "acidentes": "4962",
+        "mortos": "78",
+        "feridos_graves": "417",
+        "feridos_leves": "5967"
+    },
+    {
+        "ano": "2024",
+        "dia_semana": "Domingo",
+        "acidentes": "4519",
+        "mortos": "90",
+        "feridos_graves": "439",
+        "feridos_leves": "5568"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Segunda",
+        "acidentes": "5070",
+        "mortos": "57",
+        "feridos_graves": "317",
+        "feridos_leves": "5840"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Terça",
+        "acidentes": "4923",
+        "mortos": "43",
+        "feridos_graves": "288",
+        "feridos_leves": "5743"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Quarta",
+        "acidentes": "4988",
+        "mortos": "44",
+        "feridos_graves": "314",
+        "feridos_leves": "5787"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Quinta",
+        "acidentes": "5013",
+        "mortos": "63",
+        "feridos_graves": "289",
+        "feridos_leves": "5916"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Sexta",
+        "acidentes": "5567",
+        "mortos": "69",
+        "feridos_graves": "327",
+        "feridos_leves": "6520"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Sábado",
+        "acidentes": "4913",
+        "mortos": "96",
+        "feridos_graves": "465",
+        "feridos_leves": "5859"
+    },
+    {
+        "ano": "2023",
+        "dia_semana": "Domingo",
+        "acidentes": "4500",
+        "mortos": "95",
+        "feridos_graves": "437",
+        "feridos_leves": "5393"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Segunda",
+        "acidentes": "4953",
+        "mortos": "86",
+        "feridos_graves": "258",
+        "feridos_leves": "5766"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Terça",
+        "acidentes": "4847",
+        "mortos": "68",
+        "feridos_graves": "293",
+        "feridos_leves": "5627"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Quarta",
+        "acidentes": "4944",
+        "mortos": "67",
+        "feridos_graves": "290",
+        "feridos_leves": "5782"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Quinta",
+        "acidentes": "4906",
+        "mortos": "69",
+        "feridos_graves": "277",
+        "feridos_leves": "5664"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Sexta",
+        "acidentes": "5434",
+        "mortos": "105",
+        "feridos_graves": "343",
+        "feridos_leves": "6306"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Sábado",
+        "acidentes": "4879",
+        "mortos": "105",
+        "feridos_graves": "424",
+        "feridos_leves": "5756"
+    },
+    {
+        "ano": "2022",
+        "dia_semana": "Domingo",
+        "acidentes": "4313",
+        "mortos": "118",
+        "feridos_graves": "417",
+        "feridos_leves": "5213"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Segunda",
+        "acidentes": "4433",
+        "mortos": "69",
+        "feridos_graves": "259",
+        "feridos_leves": "5123"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Terça",
+        "acidentes": "4463",
+        "mortos": "73",
+        "feridos_graves": "283",
+        "feridos_leves": "5195"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Quarta",
+        "acidentes": "4484",
+        "mortos": "74",
+        "feridos_graves": "278",
+        "feridos_leves": "5176"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Quinta",
+        "acidentes": "4422",
+        "mortos": "72",
+        "feridos_graves": "279",
+        "feridos_leves": "5101"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Sexta",
+        "acidentes": "5006",
+        "mortos": "94",
+        "feridos_graves": "347",
+        "feridos_leves": "5790"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Sábado",
+        "acidentes": "4113",
+        "mortos": "89",
+        "feridos_graves": "369",
+        "feridos_leves": "4888"
+    },
+    {
+        "ano": "2021",
+        "dia_semana": "Domingo",
+        "acidentes": "3770",
+        "mortos": "90",
+        "feridos_graves": "346",
+        "feridos_leves": "4580"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Segunda",
+        "acidentes": "3792",
+        "mortos": "68",
+        "feridos_graves": "238",
+        "feridos_leves": "4366"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Terça",
+        "acidentes": "3668",
+        "mortos": "48",
+        "feridos_graves": "240",
+        "feridos_leves": "4177"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Quarta",
+        "acidentes": "3770",
+        "mortos": "42",
+        "feridos_graves": "240",
+        "feridos_leves": "4339"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Quinta",
+        "acidentes": "3927",
+        "mortos": "56",
+        "feridos_graves": "216",
+        "feridos_leves": "4515"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Sexta",
+        "acidentes": "4293",
+        "mortos": "63",
+        "feridos_graves": "283",
+        "feridos_leves": "4923"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Sábado",
+        "acidentes": "3747",
+        "mortos": "62",
+        "feridos_graves": "317",
+        "feridos_leves": "4430"
+    },
+    {
+        "ano": "2020",
+        "dia_semana": "Domingo",
+        "acidentes": "3304",
+        "mortos": "51",
+        "feridos_graves": "295",
+        "feridos_leves": "3956"
+    }
+]

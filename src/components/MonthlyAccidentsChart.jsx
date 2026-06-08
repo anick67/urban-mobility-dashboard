@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-    Area,
-    AreaChart,
-    CartesianGrid,
-    ResponsiveContainer,
-    Tooltip,
-    XAxis,
-    YAxis,
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
 } from 'recharts';
 
 const ORDEM_MESES = [
@@ -62,13 +62,17 @@ export default function MonthlyAccidentsChart({ ano }) {
     return {
       mes,
       label: LABELS_CURTOS[mes],
-      acidentes: Number(registo?.acidentes || 0),
+      acidentes: registo?.acidentes === null || registo?.acidentes === ''
+        ? null
+        : Number(registo?.acidentes),
     };
   });
 }, [dadosMes, ano]);
 
   const formatarNumero = (valor) => {
-    return new Intl.NumberFormat('pt-PT').format(valor);
+  return Number(valor || 0)
+    .toLocaleString('fr-FR')
+    .replace(/\u202f/g, ' ');
   };
 
   if (!dadosMes.length) {
@@ -88,8 +92,8 @@ export default function MonthlyAccidentsChart({ ano }) {
         >
           <defs>
             <linearGradient id="accidentsGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#34d399" stopOpacity={0.35} />
-              <stop offset="95%" stopColor="#34d399" stopOpacity={0.05} />
+              <stop offset="5%" stopColor="#60a5fa" stopOpacity={0.35} />
+              <stop offset="95%" stopColor="#60a5fa" stopOpacity={0.05} />
             </linearGradient>
           </defs>
 
@@ -108,25 +112,36 @@ export default function MonthlyAccidentsChart({ ano }) {
             width={60}
           />
           <Tooltip
-            formatter={(value) => [formatarNumero(value), 'Acidentes']}
-            labelFormatter={(label, payload) => {
-              if (!payload || !payload.length) return label;
-              return payload[0].payload.mes;
-            }}
-            contentStyle={{
-              borderRadius: '12px',
-              border: '1px solid #e2e8f0',
-              backgroundColor: '#ffffff',
-            }}
-          />
+  formatter={(value) => [
+    formatarNumero(value),
+    'Acidentes'
+  ]}
+  labelFormatter={(label, payload) => {
+    if (!payload || !payload.length) return label;
+    return payload[0].payload.mes;
+  }}
+  contentStyle={{
+    borderRadius: '12px',
+    border: '1px solid #e2e8f0',
+    backgroundColor: '#ffffff',
+    color: '#0f172a',
+    padding: '10px 12px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+  }}
+  itemStyle={{
+    color: '#0f172a',
+  }}
+/>
+
           <Area
             type="monotone"
             dataKey="acidentes"
-            stroke="#10b981"
+            stroke="#3b82f6"
             strokeWidth={3}
             fill="url(#accidentsGradient)"
-            dot={{ r: 4, fill: '#10b981' }}
+            dot={{ r: 4, fill: '#3b82f6' }}
             activeDot={{ r: 6 }}
+            connectNulls={false}
           />
         </AreaChart>
       </ResponsiveContainer>

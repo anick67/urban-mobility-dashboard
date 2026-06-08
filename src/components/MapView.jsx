@@ -3,7 +3,14 @@ import 'leaflet/dist/leaflet.css';
 import { useEffect, useRef, useState } from 'react';
 import { GeoJSON, MapContainer, TileLayer } from 'react-leaflet';
 
-export default function MapView({ ano }) {
+const LABELS_INDICADOR = {
+  acidentes: 'Acidentes',
+  feridos_leves: 'Feridos leves',
+  feridos_graves: 'Feridos graves',
+  mortos: 'Vítimas mortais',
+};
+
+export default function MapView({ ano, indicador = 'acidentes', altura = '400px' }) {
   const [geoData, setGeoData] = useState(null);
   const [districtData, setDistrictData] = useState([]);
   const geoJsonRef = useRef(null);
@@ -28,6 +35,12 @@ export default function MapView({ ano }) {
       .toLowerCase();
   };
 
+  const formatarNumero = (valor) => {
+    return Number(valor || 0)
+      .toLocaleString('fr-FR')
+      .replace(/\u202f/g, ' ');
+  };
+
   const getDistrictRecord = (districtName) => {
     return districtData.find(
       (item) =>
@@ -36,28 +49,75 @@ export default function MapView({ ano }) {
     );
   };
 
-  const getAccidentValue = (districtName) => {
+  const getIndicatorValue = (districtName) => {
     const record = getDistrictRecord(districtName);
-    return Number(record?.acidentes || 0);
+    return Number(record?.[indicador] || 0);
   };
 
   const getColor = (value) => {
-    if (value > 2500) return '#ef4444';
-    if (value > 1800) return '#f97316';
-    if (value > 1200) return '#facc15';
-    if (value > 700) return '#4ade80';
-    if (value > 300) return '#60a5fa';
+    if (indicador === 'acidentes' || indicador === 'feridos_leves') {
+      if (value > 2500) return '#ef4444';
+      if (value > 1800) return '#f97316';
+      if (value > 1200) return '#facc15';
+      if (value > 700) return '#4ade80';
+      if (value > 300) return '#60a5fa';
+      return '#cbd5e1';
+    }
+
+    if (indicador === 'feridos_graves') {
+      if (value > 300) return '#ef4444';
+      if (value > 200) return '#f97316';
+      if (value > 120) return '#facc15';
+      if (value > 70) return '#4ade80';
+      if (value > 30) return '#60a5fa';
+      return '#cbd5e1';
+    }
+
+    if (indicador === 'mortos') {
+      if (value > 30) return '#ef4444';
+      if (value > 20) return '#f97316';
+      if (value > 12) return '#facc15';
+      if (value > 6) return '#4ade80';
+      if (value > 2) return '#60a5fa';
+      return '#cbd5e1';
+    }
+
     return '#cbd5e1';
   };
 
+  const getLegendItems = () => {
+    if (indicador === 'acidentes' || indicador === 'feridos_leves') {
+      return ['> 2500', '1801–2500', '1201–1800', '701–1200', '301–700', '≤ 300'];
+    }
+
+    if (indicador === 'feridos_graves') {
+      return ['> 300', '201–300', '121–200', '71–120', '31–70', '≤ 30'];
+    }
+
+    if (indicador === 'mortos') {
+      return ['> 30', '21–30', '13–20', '7–12', '3–6', '≤ 2'];
+    }
+
+    return [];
+  };
+
+  const legendColors = [
+    'bg-red-500',
+    'bg-orange-500',
+    'bg-yellow-400',
+    'bg-green-400',
+    'bg-blue-400',
+    'bg-slate-300',
+  ];
+
   const getStyle = (feature) => {
     const districtName = feature?.properties?.distrito;
-    const accidents = getAccidentValue(districtName);
+    const value = getIndicatorValue(districtName);
 
     return {
       color: '#0f172a',
       weight: 1.2,
-      fillColor: getColor(accidents),
+      fillColor: getColor(value),
       fillOpacity: 0.65,
     };
   };
@@ -73,20 +133,22 @@ export default function MapView({ ano }) {
       fillOpacity: 0.85,
     });
 
-    layer.bindTooltip(
-      `
-        <div style="min-width: 140px;">
-          <strong>${props?.distrito ?? '-'}</strong><br/>
-          Ano: ${ano}<br/>
-          Acidentes: ${record?.acidentes ?? '-'}
-        </div>
-      `,
-      {
-        sticky: true,
-        direction: 'top',
-        opacity: 0.95,
-      }
-    ).openTooltip();
+    layer
+      .bindTooltip(
+        `
+          <div style="min-width: 160px;">
+            <strong>${props?.distrito ?? '-'}</strong><br/>
+            Ano: ${ano}<br/>
+            ${LABELS_INDICADOR[indicador]}: ${formatarNumero(record?.[indicador])}
+          </div>
+        `,
+        {
+          sticky: true,
+          direction: 'top',
+          opacity: 0.95,
+        }
+      )
+      .openTooltip();
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
       layer.bringToFront();
@@ -104,16 +166,20 @@ export default function MapView({ ano }) {
     const props = e.target.feature.properties;
     const record = getDistrictRecord(props.distrito);
 
-    e.target.bindPopup(`
-      <div style="min-width: 180px;">
-        <strong>${props.distrito}</strong><br/>
-        Ano: ${ano}<br/>
-        Acidentes: ${record?.acidentes ?? '-'}<br/>
-        Mortos: ${record?.mortos ?? '-'}<br/>
-        Feridos graves: ${record?.feridos_graves ?? '-'}<br/>
-        Feridos leves: ${record?.feridos_leves ?? '-'}
-      </div>
-    `).openPopup();
+    e.target
+      .bindPopup(
+        `
+          <div style="min-width: 190px;">
+            <strong>${props.distrito}</strong><br/>
+            Ano: ${ano}<br/>
+            Acidentes: ${formatarNumero(record?.acidentes)}<br/>
+            Mortos: ${formatarNumero(record?.mortos)}<br/>
+            Feridos graves: ${formatarNumero(record?.feridos_graves)}<br/>
+            Feridos leves: ${formatarNumero(record?.feridos_leves)}
+          </div>
+        `
+      )
+      .openPopup();
   };
 
   const onEachFeature = (feature, layer) => {
@@ -126,17 +192,23 @@ export default function MapView({ ano }) {
 
   if (!geoData || !districtData.length) {
     return (
-      <div className="h-[400px] rounded-[28px] border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-500">
+      <div
+        className="rounded-[28px] border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-500"
+        style={{ height: altura }}
+      >
         A carregar mapa...
       </div>
     );
   }
 
   return (
-    <div className="relative h-[400px] rounded-[28px] overflow-hidden border border-slate-200 bg-white">
+    <div
+      className="relative rounded-[28px] overflow-hidden border border-slate-200 bg-white"
+      style={{ height: altura }}
+    >
       <MapContainer
-        center={[39.7, -8.0]}
-        zoom={7}
+        center={[39.5, -8.2]}
+        zoom={6}
         minZoom={6}
         maxZoom={10}
         maxBounds={[
@@ -153,39 +225,25 @@ export default function MapView({ ano }) {
         />
 
         <GeoJSON
-          key={ano}
+          key={`${ano}-${indicador}`}
           ref={geoJsonRef}
           data={geoData}
           style={getStyle}
           onEachFeature={onEachFeature}
         />
 
-        <div className="absolute bottom-4 right-4 z-[1000] rounded-lg bg-white/90 border border-slate-200 px-3 py-2 text-[11px] shadow-sm">
+        <div className="absolute bottom-4 right-4 z-[1000] rounded-xl bg-white/95 border border-slate-200 px-4 py-3 text-sm shadow-md">
+          <div className="mb-2 font-semibold text-slate-700">
+            {LABELS_INDICADOR[indicador]}
+          </div>
+
           <div className="space-y-1 text-slate-600">
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-red-500" />
-              <span>Mais de 2500</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-orange-500" />
-              <span>1801 a 2500</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-yellow-400" />
-              <span>1201 a 1800</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-green-400" />
-              <span>701 a 1200</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-blue-400" />
-              <span>301 a 700</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-sm bg-slate-300" />
-              <span>Até 300</span>
-            </div>
+            {getLegendItems().map((label, index) => (
+              <div key={label} className="flex items-center gap-2">
+                <span className={`h-4 w-4 rounded-sm ${legendColors[index]}`} />
+                <span>{label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </MapContainer>

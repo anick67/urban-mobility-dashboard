@@ -83,29 +83,26 @@
     {
         "ano": "2025",
         "mes": "Outubro",
-        "acidentes": "0",
-        "mortos": "0",
-        "feridos_graves": "0",
-        "feridos_leves": "0",
-        "": ""
+        "acidentes": null,
+        "mortos": null,
+        "feridos_graves": null,
+        "feridos_leves": null
     },
     {
         "ano": "2025",
         "mes": "Novembro",
-        "acidentes": "0",
-        "mortos": "0",
-        "feridos_graves": "0",
-        "feridos_leves": "0",
-        "": ""
+        "acidentes": null,
+        "mortos": null,
+        "feridos_graves": null,
+            "feridos_leves": null
     },
     {
         "ano": "2025",
         "mes": "Dezembro",
-        "acidentes": "0",
-        "mortos": "0",
-        "feridos_graves": "0",
-        "feridos_leves": "0",
-        "": ""
+        "acidentes": null,
+        "mortos": null,
+        "feridos_graves": null,
+        "feridos_leves": null
     },
     {
         "ano": "2024",

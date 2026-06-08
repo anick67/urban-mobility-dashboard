@@ -1,0 +1,458 @@
+[
+    {
+        "ano": "2025",
+        "via": "Autoestrada",
+        "acidentes": "1709",
+        "mortos": "34",
+        "feridos_graves": "146",
+        "feridos_leves": "2393"
+    },
+    {
+        "ano": "2025",
+        "via": "Arruamento",
+        "acidentes": "18058",
+        "mortos": "113",
+        "feridos_graves": "971",
+        "feridos_leves": "20287"
+    },
+    {
+        "ano": "2025",
+        "via": "Estrada_municipal",
+        "acidentes": "978",
+        "mortos": "23",
+        "feridos_graves": "144",
+        "feridos_leves": "1097"
+    },
+    {
+        "ano": "2025",
+        "via": "Estrada_nacional",
+        "acidentes": "5587",
+        "mortos": "109",
+        "feridos_graves": "611",
+        "feridos_leves": "6978"
+    },
+    {
+        "ano": "2025",
+        "via": "Estrada_regional",
+        "acidentes": "373",
+        "mortos": "8",
+        "feridos_graves": "73",
+        "feridos_leves": "463"
+    },
+    {
+        "ano": "2025",
+        "via": "Itinerário_Complementar",
+        "acidentes": "676",
+        "mortos": "14",
+        "feridos_graves": "51",
+        "feridos_leves": "880"
+    },
+    {
+        "ano": "2025",
+        "via": "Itinerário_principal",
+        "acidentes": "165",
+        "mortos": "13",
+        "feridos_graves": "18",
+        "feridos_leves": "226"
+    },
+    {
+        "ano": "2025",
+        "via": "Outras vias",
+        "acidentes": "1429",
+        "mortos": "23",
+        "feridos_graves": "147",
+        "feridos_leves": "1652"
+    },
+    {
+        "ano": "2024",
+        "via": "Autoestrada",
+        "acidentes": "2172",
+        "mortos": "43",
+        "feridos_graves": "153",
+        "feridos_leves": "3024"
+    },
+    {
+        "ano": "2024",
+        "via": "Arruamento",
+        "acidentes": "22742",
+        "mortos": "150",
+        "feridos_graves": "1186",
+        "feridos_leves": "25764"
+    },
+    {
+        "ano": "2024",
+        "via": "Estrada_municipal",
+        "acidentes": "1230",
+        "mortos": "25",
+        "feridos_graves": "151",
+        "feridos_leves": "1371"
+    },
+    {
+        "ano": "2024",
+        "via": "Estrada_nacional",
+        "acidentes": "7229",
+        "mortos": "169",
+        "feridos_graves": "779",
+        "feridos_leves": "8988"
+    },
+    {
+        "ano": "2024",
+        "via": "Estrada_regional",
+        "acidentes": "252",
+        "mortos": "5",
+        "feridos_graves": "29",
+        "feridos_leves": "318"
+    },
+    {
+        "ano": "2024",
+        "via": "Itinerário_Complementar",
+        "acidentes": "948",
+        "mortos": "24",
+        "feridos_graves": "85",
+        "feridos_leves": "1207"
+    },
+    {
+        "ano": "2024",
+        "via": "Itinerário_principal",
+        "acidentes": "242",
+        "mortos": "9",
+        "feridos_graves": "26",
+        "feridos_leves": "326"
+    },
+    {
+        "ano": "2024",
+        "via": "Outras vias",
+        "acidentes": "1523",
+        "mortos": "38",
+        "feridos_graves": "167",
+        "feridos_leves": "1685"
+    },
+    {
+        "ano": "2023",
+        "via": "Autoestrada",
+        "acidentes": "2011",
+        "mortos": "46",
+        "feridos_graves": "153",
+        "feridos_leves": "2838"
+    },
+    {
+        "ano": "2023",
+        "via": "Arruamento",
+        "acidentes": "21947",
+        "mortos": "138",
+        "feridos_graves": "1118",
+        "feridos_leves": "24713"
+    },
+    {
+        "ano": "2023",
+        "via": "Estrada_municipal",
+        "acidentes": "1263",
+        "mortos": "27",
+        "feridos_graves": "139",
+        "feridos_leves": "1480"
+    },
+    {
+        "ano": "2023",
+        "via": "Estrada_nacional",
+        "acidentes": "6967",
+        "mortos": "156",
+        "feridos_graves": "757",
+        "feridos_leves": "8674"
+    },
+    {
+        "ano": "2023",
+        "via": "Estrada_regional",
+        "acidentes": "247",
+        "mortos": "10",
+        "feridos_graves": "29",
+        "feridos_leves": "303"
+    },
+    {
+        "ano": "2023",
+        "via": "Itinerário_Complementar",
+        "acidentes": "828",
+        "mortos": "35",
+        "feridos_graves": "71",
+        "feridos_leves": "1101"
+    },
+    {
+        "ano": "2023",
+        "via": "Itinerário_principal",
+        "acidentes": "218",
+        "mortos": "14",
+        "feridos_graves": "29",
+        "feridos_leves": "269"
+    },
+    {
+        "ano": "2023",
+        "via": "Outras vias",
+        "acidentes": "1493",
+        "mortos": "41",
+        "feridos_graves": "141",
+        "feridos_leves": "1680"
+    },
+    {
+        "ano": "2022",
+        "via": "Autoestrada",
+        "acidentes": "1901",
+        "mortos": "57",
+        "feridos_graves": "161",
+        "feridos_leves": "2674"
+    },
+    {
+        "ano": "2022",
+        "via": "Arruamento",
+        "acidentes": "21609",
+        "mortos": "231",
+        "feridos_graves": "1086",
+        "feridos_leves": "24301"
+    },
+    {
+        "ano": "2022",
+        "via": "Estrada_municipal",
+        "acidentes": "1250",
+        "mortos": "46",
+        "feridos_graves": "138",
+        "feridos_leves": "1405"
+    },
+    {
+        "ano": "2022",
+        "via": "Estrada_nacional",
+        "acidentes": "6258",
+        "mortos": "180",
+        "feridos_graves": "620",
+        "feridos_leves": "7785"
+    },
+    {
+        "ano": "2022",
+        "via": "Estrada_regional",
+        "acidentes": "446",
+        "mortos": "7",
+        "feridos_graves": "58",
+        "feridos_leves": "536"
+    },
+    {
+        "ano": "2022",
+        "via": "Itinerário_Complementar",
+        "acidentes": "880",
+        "mortos": "40",
+        "feridos_graves": "81",
+        "feridos_leves": "1157"
+    },
+    {
+        "ano": "2022",
+        "via": "Itinerário_principal",
+        "acidentes": "245",
+        "mortos": "14",
+        "feridos_graves": "23",
+        "feridos_leves": "328"
+    },
+    {
+        "ano": "2022",
+        "via": "Outras vias",
+        "acidentes": "1687",
+        "mortos": "43",
+        "feridos_graves": "135",
+        "feridos_leves": "1928"
+    },
+    {
+        "ano": "2021",
+        "via": "Autoestrada",
+        "acidentes": "1555",
+        "mortos": "44",
+        "feridos_graves": "141",
+        "feridos_leves": "2093"
+    },
+    {
+        "ano": "2021",
+        "via": "Arruamento",
+        "acidentes": "19450",
+        "mortos": "210",
+        "feridos_graves": "1000",
+        "feridos_leves": "21992"
+    },
+    {
+        "ano": "2021",
+        "via": "Estrada_municipal",
+        "acidentes": "1132",
+        "mortos": "43",
+        "feridos_graves": "138",
+        "feridos_leves": "1321"
+    },
+    {
+        "ano": "2021",
+        "via": "Estrada_nacional",
+        "acidentes": "5485",
+        "mortos": "173",
+        "feridos_graves": "585",
+        "feridos_leves": "6770"
+    },
+    {
+        "ano": "2021",
+        "via": "Estrada_regional",
+        "acidentes": "453",
+        "mortos": "9",
+        "feridos_graves": "70",
+        "feridos_leves": "528"
+    },
+    {
+        "ano": "2021",
+        "via": "Itinerário_Complementar",
+        "acidentes": "702",
+        "mortos": "28",
+        "feridos_graves": "65",
+        "feridos_leves": "927"
+    },
+    {
+        "ano": "2021",
+        "via": "Itinerário_principal",
+        "acidentes": "193",
+        "mortos": "9",
+        "feridos_graves": "13",
+        "feridos_leves": "272"
+    },
+    {
+        "ano": "2021",
+        "via": "Outras vias",
+        "acidentes": "1721",
+        "mortos": "45",
+        "feridos_graves": "149",
+        "feridos_leves": "1950"
+    },
+    {
+        "ano": "2020",
+        "via": "Autoestrada",
+        "acidentes": "1426",
+        "mortos": "49",
+        "feridos_graves": "111",
+        "feridos_leves": "1902"
+    },
+    {
+        "ano": "2020",
+        "via": "Arruamento",
+        "acidentes": "16578",
+        "mortos": "125",
+        "feridos_graves": "791",
+        "feridos_leves": "18596"
+    },
+    {
+        "ano": "2020",
+        "via": "Estrada_municipal",
+        "acidentes": "1124",
+        "mortos": "24",
+        "feridos_graves": "130",
+        "feridos_leves": "1270"
+    },
+    {
+        "ano": "2020",
+        "via": "Estrada_nacional",
+        "acidentes": "5050",
+        "mortos": "135",
+        "feridos_graves": "550",
+        "feridos_leves": "6187"
+    },
+    {
+        "ano": "2020",
+        "via": "Estrada_regional",
+        "acidentes": "203",
+        "mortos": "23",
+        "feridos_graves": "34",
+        "feridos_leves": "236"
+    },
+    {
+        "ano": "2020",
+        "via": "Itinerário_Complementar",
+        "acidentes": "652",
+        "mortos": "18",
+        "feridos_graves": "65",
+        "feridos_leves": "835"
+    },
+    {
+        "ano": "2020",
+        "via": "Itinerário_principal",
+        "acidentes": "186",
+        "mortos": "6",
+        "feridos_graves": "24",
+        "feridos_leves": "244"
+    },
+    {
+        "ano": "2020",
+        "via": "Outras vias",
+        "acidentes": "1282",
+        "mortos": "28",
+        "feridos_graves": "137",
+        "feridos_leves": "1436"
+    },
+    {
+        "ano": "",
+        "via": "",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "",
+        "via": "",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "",
+        "via": "*Inclui acessos, estradas florestais, pontes, variantes e não definidas",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "AE",
+        "via": "Autoestrada",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "EM",
+        "via": "Estrada municipal",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "EN",
+        "via": "Estrada nacional",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "ER",
+        "via": "Estrada regional",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "IC",
+        "via": "Itinerário Complementar",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    },
+    {
+        "ano": "IP",
+        "via": "Itinerário principal",
+        "acidentes": "",
+        "mortos": "",
+        "feridos_graves": "",
+        "feridos_leves": ""
+    }
+]

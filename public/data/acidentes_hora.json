@@ -1,0 +1,386 @@
+[
+    {
+        "ano": "2025",
+        "hora": "[00:00-03:00[",
+        "acidentes": "1006",
+        "mortos": "32",
+        "feridos_graves": "101",
+        "feridos_leves": "1208"
+    },
+    {
+        "ano": "2025",
+        "hora": "[03:00-06:00[",
+        "acidentes": "687",
+        "mortos": "26",
+        "feridos_graves": "93",
+        "feridos_leves": "803"
+    },
+    {
+        "ano": "2025",
+        "hora": "[06:00-09:00[",
+        "acidentes": "3230",
+        "mortos": "42",
+        "feridos_graves": "240",
+        "feridos_leves": "3698"
+    },
+    {
+        "ano": "2025",
+        "hora": "[09:00-12:00[",
+        "acidentes": "4784",
+        "mortos": "38",
+        "feridos_graves": "311",
+        "feridos_leves": "5503"
+    },
+    {
+        "ano": "2025",
+        "hora": "[12:00-15:00[",
+        "acidentes": "5177",
+        "mortos": "37",
+        "feridos_graves": "333",
+        "feridos_leves": "6147"
+    },
+    {
+        "ano": "2025",
+        "hora": "[15:00-18:00[",
+        "acidentes": "6229",
+        "mortos": "83",
+        "feridos_graves": "447",
+        "feridos_leves": "7489"
+    },
+    {
+        "ano": "2025",
+        "hora": "[18:00-21:00[",
+        "acidentes": "5506",
+        "mortos": "46",
+        "feridos_graves": "414",
+        "feridos_leves": "6367"
+    },
+    {
+        "ano": "2025",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2356",
+        "mortos": "33",
+        "feridos_graves": "222",
+        "feridos_leves": "2761"
+    },
+    {
+        "ano": "2024",
+        "hora": "[00:00-03:00[",
+        "acidentes": "1243",
+        "mortos": "38",
+        "feridos_graves": "129",
+        "feridos_leves": "1490"
+    },
+    {
+        "ano": "2024",
+        "hora": "[03:00-06:00[",
+        "acidentes": "741",
+        "mortos": "27",
+        "feridos_graves": "77",
+        "feridos_leves": "850"
+    },
+    {
+        "ano": "2024",
+        "hora": "[06:00-09:00[",
+        "acidentes": "4164",
+        "mortos": "62",
+        "feridos_graves": "278",
+        "feridos_leves": "4860"
+    },
+    {
+        "ano": "2024",
+        "hora": "[09:00-12:00[",
+        "acidentes": "6117",
+        "mortos": "48",
+        "feridos_graves": "309",
+        "feridos_leves": "7069"
+    },
+    {
+        "ano": "2024",
+        "hora": "[12:00-15:00[",
+        "acidentes": "6529",
+        "mortos": "58",
+        "feridos_graves": "444",
+        "feridos_leves": "7733"
+    },
+    {
+        "ano": "2024",
+        "hora": "[15:00-18:00[",
+        "acidentes": "7768",
+        "mortos": "83",
+        "feridos_graves": "526",
+        "feridos_leves": "9184"
+    },
+    {
+        "ano": "2024",
+        "hora": "[18:00-21:00[",
+        "acidentes": "6965",
+        "mortos": "100",
+        "feridos_graves": "573",
+        "feridos_leves": "8165"
+    },
+    {
+        "ano": "2024",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2811",
+        "mortos": "47",
+        "feridos_graves": "240",
+        "feridos_leves": "3332"
+    },
+    {
+        "ano": "2023",
+        "hora": "[00:00-03:00[",
+        "acidentes": "1199",
+        "mortos": "38",
+        "feridos_graves": "131",
+        "feridos_leves": "1449"
+    },
+    {
+        "ano": "2023",
+        "hora": "[03:00-06:00[",
+        "acidentes": "753",
+        "mortos": "33",
+        "feridos_graves": "105",
+        "feridos_leves": "876"
+    },
+    {
+        "ano": "2023",
+        "hora": "[06:00-09:00[",
+        "acidentes": "3866",
+        "mortos": "53",
+        "feridos_graves": "239",
+        "feridos_leves": "4476"
+    },
+    {
+        "ano": "2023",
+        "hora": "[09:00-12:00[",
+        "acidentes": "5754",
+        "mortos": "55",
+        "feridos_graves": "286",
+        "feridos_leves": "6679"
+    },
+    {
+        "ano": "2023",
+        "hora": "[12:00-15:00[",
+        "acidentes": "6265",
+        "mortos": "67",
+        "feridos_graves": "414",
+        "feridos_leves": "7358"
+    },
+    {
+        "ano": "2023",
+        "hora": "[15:00-18:00[",
+        "acidentes": "7669",
+        "mortos": "67",
+        "feridos_graves": "538",
+        "feridos_leves": "9211"
+    },
+    {
+        "ano": "2023",
+        "hora": "[18:00-21:00[",
+        "acidentes": "6886",
+        "mortos": "107",
+        "feridos_graves": "514",
+        "feridos_leves": "7962"
+    },
+    {
+        "ano": "2023",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2582",
+        "mortos": "47",
+        "feridos_graves": "210",
+        "feridos_leves": "3047"
+    },
+    {
+        "ano": "2022",
+        "hora": "[00:00-03:00[",
+        "acidentes": "1232",
+        "mortos": "44",
+        "feridos_graves": "119",
+        "feridos_leves": "1467"
+    },
+    {
+        "ano": "2022",
+        "hora": "[03:00-06:00[",
+        "acidentes": "816",
+        "mortos": "39",
+        "feridos_graves": "119",
+        "feridos_leves": "939"
+    },
+    {
+        "ano": "2022",
+        "hora": "[06:00-09:00[",
+        "acidentes": "3755",
+        "mortos": "84",
+        "feridos_graves": "255",
+        "feridos_leves": "4401"
+    },
+    {
+        "ano": "2022",
+        "hora": "[09:00-12:00[",
+        "acidentes": "5502",
+        "mortos": "82",
+        "feridos_graves": "274",
+        "feridos_leves": "6294"
+    },
+    {
+        "ano": "2022",
+        "hora": "[12:00-15:00[",
+        "acidentes": "6181",
+        "mortos": "88",
+        "feridos_graves": "320",
+        "feridos_leves": "7184"
+    },
+    {
+        "ano": "2022",
+        "hora": "[15:00-18:00[",
+        "acidentes": "7159",
+        "mortos": "112",
+        "feridos_graves": "480",
+        "feridos_leves": "8498"
+    },
+    {
+        "ano": "2022",
+        "hora": "[18:00-21:00[",
+        "acidentes": "6809",
+        "mortos": "115",
+        "feridos_graves": "503",
+        "feridos_leves": "8010"
+    },
+    {
+        "ano": "2022",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2822",
+        "mortos": "54",
+        "feridos_graves": "232",
+        "feridos_leves": "3321"
+    },
+    {
+        "ano": "2021",
+        "hora": "[00:00-03:00[",
+        "acidentes": "1001",
+        "mortos": "35",
+        "feridos_graves": "130",
+        "feridos_leves": "1222"
+    },
+    {
+        "ano": "2021",
+        "hora": "[03:00-06:00[",
+        "acidentes": "552",
+        "mortos": "18",
+        "feridos_graves": "78",
+        "feridos_leves": "639"
+    },
+    {
+        "ano": "2021",
+        "hora": "[06:00-09:00[",
+        "acidentes": "3281",
+        "mortos": "46",
+        "feridos_graves": "164",
+        "feridos_leves": "3911"
+    },
+    {
+        "ano": "2021",
+        "hora": "[09:00-12:00[",
+        "acidentes": "5112",
+        "mortos": "79",
+        "feridos_graves": "291",
+        "feridos_leves": "5884"
+    },
+    {
+        "ano": "2021",
+        "hora": "[12:00-15:00[",
+        "acidentes": "5679",
+        "mortos": "88",
+        "feridos_graves": "294",
+        "feridos_leves": "6553"
+    },
+    {
+        "ano": "2021",
+        "hora": "[15:00-18:00[",
+        "acidentes": "6529",
+        "mortos": "122",
+        "feridos_graves": "472",
+        "feridos_leves": "7696"
+    },
+    {
+        "ano": "2021",
+        "hora": "[18:00-21:00[",
+        "acidentes": "6087",
+        "mortos": "107",
+        "feridos_graves": "512",
+        "feridos_leves": "7029"
+    },
+    {
+        "ano": "2021",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2450",
+        "mortos": "66",
+        "feridos_graves": "220",
+        "feridos_leves": "2919"
+    },
+    {
+        "ano": "2020",
+        "hora": "[00:00-03:00[",
+        "acidentes": "824",
+        "mortos": "28",
+        "feridos_graves": "78",
+        "feridos_leves": "995"
+    },
+    {
+        "ano": "2020",
+        "hora": "[03:00-06:00[",
+        "acidentes": "447",
+        "mortos": "18",
+        "feridos_graves": "49",
+        "feridos_leves": "535"
+    },
+    {
+        "ano": "2020",
+        "hora": "[06:00-09:00[",
+        "acidentes": "2673",
+        "mortos": "41",
+        "feridos_graves": "151",
+        "feridos_leves": "3137"
+    },
+    {
+        "ano": "2020",
+        "hora": "[09:00-12:00[",
+        "acidentes": "4473",
+        "mortos": "55",
+        "feridos_graves": "228",
+        "feridos_leves": "5105"
+    },
+    {
+        "ano": "2020",
+        "hora": "[12:00-15:00[",
+        "acidentes": "4813",
+        "mortos": "52",
+        "feridos_graves": "259",
+        "feridos_leves": "5574"
+    },
+    {
+        "ano": "2020",
+        "hora": "[15:00-18:00[",
+        "acidentes": "5480",
+        "mortos": "65",
+        "feridos_graves": "401",
+        "feridos_leves": "6410"
+    },
+    {
+        "ano": "2020",
+        "hora": "[18:00-21:00[",
+        "acidentes": "5521",
+        "mortos": "74",
+        "feridos_graves": "434",
+        "feridos_leves": "6310"
+    },
+    {
+        "ano": "2020",
+        "hora": "[21:00-00:00[",
+        "acidentes": "2270",
+        "mortos": "57",
+        "feridos_graves": "229",
+        "feridos_leves": "2640"
+    }
+]
