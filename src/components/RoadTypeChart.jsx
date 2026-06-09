@@ -21,11 +21,6 @@ const CORES_VIA = {
 const formatarVia = (via) => {
   return String(via || '')
     .replaceAll('_', ' ')
-    .replace('Estrada municipal', 'Estr. Municipal')
-    .replace('Estrada nacional', 'Estr. Nacional')
-    .replace('Estrada regional', 'Estr. Regional')
-    .replace('Itinerário Complementar', 'IC')
-    .replace('Itinerário principal', 'IP');
 };
 
 export default function RoadTypeChart({

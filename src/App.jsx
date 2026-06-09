@@ -656,7 +656,7 @@ export default function MobilidadeDashboard() {
                   <div className="rounded-xl bg-slate-50 p-4">
                     <div className="text-sm text-slate-500">Tecnologias</div>
                     <div className="mt-1 font-semibold text-slate-800">
-                      React · Leaflet · GeoJSON · Recharts
+                      React · Tailwind CSS · Leaflet · GeoJSON · Recharts
                     </div>
                   </div>
                 </div>
