@@ -1,29 +1,28 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
 const formatarNumero = (valor) => {
   return Number(valor || 0)
-    .toLocaleString('fr-FR')
-    .replace(/\u202f/g, ' ');
+    .toLocaleString("fr-FR")
+    .replace(/\u202f/g, " ");
 };
 
 const formatarVia = (via) =>
-  String(via || '')
-    .replaceAll('_', ' ')
-    .replace('Estrada nacional', 'Estr. Nacional')
-    .replace('Estrada municipal', 'Estr. Municipal')
-    .replace('Estrada regional', 'Estr. Regional')
-    .replace('Itinerário Complementar', 'IC')
-    .replace('Itinerário principal', 'IP');
+  String(via || "")
+    .replaceAll("_", " ")
+    .replace("Estrada nacional", "Estr. Nacional")
+    .replace("Estrada municipal", "Estr. Municipal")
+    .replace("Estrada regional", "Estr. Regional")
+    .replace("Itinerário Complementar", "IC")
+    .replace("Itinerário principal", "IP");
 
 const formatarHora = (hora) =>
-  String(hora || '')
-    .replace('[', '')
-    .replace('[', '')
-    .replace(']', '')
-    .replace('-', '–');
+  String(hora || "")
+    .replaceAll("[", "")
+    .replaceAll("]", "")
+    .replace("-", "–");
 
 const formatarDia = (dia) => {
-  if (dia === 'Sábado' || dia === 'Domingo') return dia;
+  if (dia === "Sábado" || dia === "Domingo") return dia;
   return `${dia}-feira`;
 };
 
@@ -36,11 +35,11 @@ export default function YearSummary({ ano }) {
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/acidentes_distrito.json').then((res) => res.json()),
-      fetch('/data/acidentes_hora.json').then((res) => res.json()),
-      fetch('/data/acidentes_dia_semana.json').then((res) => res.json()),
-      fetch('/data/acidentes_tipo_via.json').then((res) => res.json()),
-      fetch('/data/acidentes_tipo_acidente.json').then((res) => res.json()),
+      fetch("/data/acidentes_distrito.json").then((res) => res.json()),
+      fetch("/data/acidentes_hora.json").then((res) => res.json()),
+      fetch("/data/acidentes_dia_semana.json").then((res) => res.json()),
+      fetch("/data/acidentes_tipo_via.json").then((res) => res.json()),
+      fetch("/data/acidentes_tipo_acidente.json").then((res) => res.json()),
     ])
       .then(([distrito, hora, semana, via, natureza]) => {
         setDadosDistrito(distrito);
@@ -49,16 +48,17 @@ export default function YearSummary({ ano }) {
         setDadosVia(via);
         setDadosNatureza(natureza);
       })
-      .catch((err) => console.error('Erro ao carregar resumo do ano:', err));
+      .catch((err) => console.error("Erro ao carregar resumo do ano:", err));
   }, []);
 
+  // Reúne os principais indicadores do ano selecionado a partir das várias dimensões dos dados
   const resumo = useMemo(() => {
     const filtrarAno = (dados) =>
       dados.filter((item) => String(item.ano).trim() === String(ano).trim());
 
     const maxPorCampo = (dados, campo) =>
       [...dados].sort(
-        (a, b) => Number(b[campo] || 0) - Number(a[campo] || 0)
+        (a, b) => Number(b[campo] || 0) - Number(a[campo] || 0),
       )[0];
 
     const distritosAno = filtrarAno(dadosDistrito);
@@ -68,12 +68,12 @@ export default function YearSummary({ ano }) {
     const naturezaAno = filtrarAno(dadosNatureza);
 
     return {
-      distritoMaisAcidentes: maxPorCampo(distritosAno, 'acidentes'),
-      distritoMaisMortos: maxPorCampo(distritosAno, 'mortos'),
-      horaMaisCritica: maxPorCampo(horasAno, 'acidentes'),
-      diaMaisCritico: maxPorCampo(semanaAno, 'acidentes'),
-      viaPredominante: maxPorCampo(viasAno, 'acidentes'),
-      naturezaMaisFrequente: maxPorCampo(naturezaAno, 'acidentes'),
+      distritoMaisAcidentes: maxPorCampo(distritosAno, "acidentes"),
+      distritoMaisMortos: maxPorCampo(distritosAno, "mortos"),
+      horaMaisCritica: maxPorCampo(horasAno, "acidentes"),
+      diaMaisCritico: maxPorCampo(semanaAno, "acidentes"),
+      viaPredominante: maxPorCampo(viasAno, "acidentes"),
+      naturezaMaisFrequente: maxPorCampo(naturezaAno, "acidentes"),
     };
   }, [ano, dadosDistrito, dadosHora, dadosSemana, dadosVia, dadosNatureza]);
 
@@ -149,9 +149,7 @@ export default function YearSummary({ ano }) {
         </div>
 
         <div className="rounded-xl bg-orange-50 p-4">
-          <div className="text-sm text-slate-500">
-            Tipo de via predominante
-          </div>
+          <div className="text-sm text-slate-500">Tipo de via predominante</div>
           <div className="mt-1 text-xl font-semibold text-slate-800">
             {formatarVia(resumo.viaPredominante?.via)}
           </div>
@@ -161,9 +159,7 @@ export default function YearSummary({ ano }) {
         </div>
 
         <div className="rounded-xl bg-indigo-50 p-4">
-          <div className="text-sm text-slate-500">
-            Natureza mais frequente
-          </div>
+          <div className="text-sm text-slate-500">Natureza mais frequente</div>
           <div className="mt-1 text-xl font-semibold text-slate-800">
             {resumo.naturezaMaisFrequente?.tipo_acidente}
           </div>

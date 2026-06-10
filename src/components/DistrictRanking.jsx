@@ -6,7 +6,7 @@ const formatarNumero = (valor) => {
     .replace(/\u202f/g, ' ');
 };
 
-function RankingCard({ title, data, field, suffix, ano }) {
+function RankingCard({ title, data, field, suffix }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
       <h3 className="text-2xl font-semibold">{title}</h3>
@@ -26,7 +26,6 @@ function RankingCard({ title, data, field, suffix, ano }) {
                 <div className="font-semibold text-slate-800">
                   {item.distrito}
                 </div>
-                <div className="text-xs text-slate-500">Ano {ano}</div>
               </div>
             </div>
 
@@ -88,7 +87,6 @@ export default function DistrictRanking({ ano }) {
         data={topAcidentes}
         field="acidentes"
         suffix="acidentes"
-        ano={ano}
       />
 
       <RankingCard
@@ -96,7 +94,6 @@ export default function DistrictRanking({ ano }) {
         data={topMortos}
         field="mortos"
         suffix="vítimas mortais"
-        ano={ano}
       />
     </div>
   );

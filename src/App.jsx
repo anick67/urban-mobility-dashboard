@@ -1,47 +1,50 @@
-import { useEffect, useState } from 'react';
-import AccidentTypeChart from './components/AccidentTypeChart';
-import DistrictRanking from './components/DistrictRanking';
-import HourlyAccidentsChart from './components/HourlyAccidentsChart';
-import MapView from './components/MapView';
-import MonthlyAccidentsChart from './components/MonthlyAccidentsChart';
-import RoadTypeChart from './components/RoadTypeChart';
-import RoadTypeInsights from './components/RoadTypeInsights';
-import WeekdayAccidentsChart from './components/WeekdayAccidentsChart';
-import YearSummary from './components/YearSummary';
+import { useEffect, useState } from "react";
+import AccidentTypeChart from "./components/AccidentTypeChart";
+import DistrictRanking from "./components/DistrictRanking";
+import HourlyAccidentsChart from "./components/HourlyAccidentsChart";
+import MapView from "./components/MapView";
+import MonthlyAccidentsChart from "./components/MonthlyAccidentsChart";
+import RoadTypeChart from "./components/RoadTypeChart";
+import RoadTypeInsights from "./components/RoadTypeInsights";
+import TemporalRanking from "./components/TemporalRanking";
+import WeekdayAccidentsChart from "./components/WeekdayAccidentsChart";
+import YearSummary from "./components/YearSummary";
 
 export default function MobilidadeDashboard() {
-  const [anoSelecionado, setAnoSelecionado] = useState('2025');
+  const [anoSelecionado, setAnoSelecionado] = useState("2025");
   const [dadosDistrito, setDadosDistrito] = useState([]);
   const [dadosMes, setDadosMes] = useState([]);
   const [dadosHora, setDadosHora] = useState([]);
   const [dadosSemana, setDadosSemana] = useState([]);
   const [dadosVia, setDadosVia] = useState([]);
   const [dadosNatureza, setDadosNatureza] = useState([]);
-  const [gravidadeSelecionada, setGravidadeSelecionada] = useState('acidentes');
-  const [paginaAtiva, setPaginaAtiva] = useState('Dashboard');
+  const [gravidadeSelecionada, setGravidadeSelecionada] = useState("acidentes");
+  const [paginaAtiva, setPaginaAtiva] = useState("Dashboard");
 
+  // Carrega todos os ficheiros JSON utilizados nas visualizações do dashboard
   useEffect(() => {
-  Promise.all([
-    fetch('/data/acidentes_distrito.json').then((res) => res.json()),
-    fetch('/data/acidentes_mes.json').then((res) => res.json()),
-    fetch('/data/acidentes_hora.json').then((res) => res.json()),
-    fetch('/data/acidentes_dia_semana.json').then((res) => res.json()),
-    fetch('/data/acidentes_tipo_via.json').then((res) => res.json()),
-    fetch('/data/acidentes_tipo_acidente.json').then((res) => res.json()),
-  ])
-    .then(([distrito, mes, hora, semana, via, natureza]) => {
-      setDadosDistrito(distrito);
-      setDadosMes(mes);
-      setDadosHora(hora);
-      setDadosSemana(semana);
-      setDadosVia(via);
-      setDadosNatureza(natureza);
-    })
-    .catch((err) => console.error('Erro ao carregar dados:', err));
-}, []);
+    Promise.all([
+      fetch("/data/acidentes_distrito.json").then((res) => res.json()),
+      fetch("/data/acidentes_mes.json").then((res) => res.json()),
+      fetch("/data/acidentes_hora.json").then((res) => res.json()),
+      fetch("/data/acidentes_dia_semana.json").then((res) => res.json()),
+      fetch("/data/acidentes_tipo_via.json").then((res) => res.json()),
+      fetch("/data/acidentes_tipo_acidente.json").then((res) => res.json()),
+    ])
+      .then(([distrito, mes, hora, semana, via, natureza]) => {
+        setDadosDistrito(distrito);
+        setDadosMes(mes);
+        setDadosHora(hora);
+        setDadosSemana(semana);
+        setDadosVia(via);
+        setDadosNatureza(natureza);
+      })
+      .catch((err) => console.error("Erro ao carregar dados:", err));
+  }, []);
 
+  // Filtra os dados globais pelo ano selecionado, garantindo consistência entre números e strings
   const dadosAno = dadosDistrito.filter(
-    (item) => String(item.ano).trim() === String(anoSelecionado).trim()
+    (item) => String(item.ano).trim() === String(anoSelecionado).trim(),
   );
 
   const somarCampo = (campo) => {
@@ -52,224 +55,260 @@ export default function MobilidadeDashboard() {
 
   const formatarNumero = (valor) => {
     return Number(valor || 0)
-      .toLocaleString('fr-FR')
-      .replace(/\u202f/g, ' ');
+      .toLocaleString("fr-FR")
+      .replace(/\u202f/g, " ");
   };
 
   const statCards = [
     {
-      title: 'Total de Acidentes',
-      value: formatarNumero(somarCampo('acidentes')),
+      title: "Total de Acidentes",
+      value: formatarNumero(somarCampo("acidentes")),
       change: `Ano ${anoSelecionado}`,
-      color: 'text-slate-500',
-      bg: 'bg-blue-50',
+      color: "text-slate-500",
+      bg: "bg-blue-50",
     },
     {
-      title: 'Feridos Graves',
-      value: formatarNumero(somarCampo('feridos_graves')),
+      title: "Feridos Graves",
+      value: formatarNumero(somarCampo("feridos_graves")),
       change: `Ano ${anoSelecionado}`,
-      color: 'text-slate-500',
-      bg: 'bg-orange-50',
+      color: "text-slate-500",
+      bg: "bg-orange-50",
     },
     {
-      title: 'Feridos Ligeiros',
-      value: formatarNumero(somarCampo('feridos_leves')),
+      title: "Feridos Ligeiros",
+      value: formatarNumero(somarCampo("feridos_leves")),
       change: `Ano ${anoSelecionado}`,
-      color: 'text-slate-500',
-      bg: 'bg-emerald-50',
+      color: "text-slate-500",
+      bg: "bg-emerald-50",
     },
     {
-      title: 'Vítimas Mortais',
-      value: formatarNumero(somarCampo('mortos')),
+      title: "Vítimas Mortais",
+      value: formatarNumero(somarCampo("mortos")),
       change: `Ano ${anoSelecionado}`,
-      color: 'text-slate-500',
-      bg: 'bg-violet-50',
+      color: "text-slate-500",
+      bg: "bg-violet-50",
     },
   ];
 
+  // Gera um ficheiro CSV com o resumo e os principais dados apresentados no dashboard
   const handleExportCSV = () => {
-  const filtrarAno = (dados) =>
-    dados.filter((item) => String(item.ano).trim() === String(anoSelecionado).trim());
+    const filtrarAno = (dados) =>
+      dados.filter(
+        (item) => String(item.ano).trim() === String(anoSelecionado).trim(),
+      );
 
-  const maxPorCampo = (dados, campo) =>
-    [...dados].sort((a, b) => Number(b[campo] || 0) - Number(a[campo] || 0))[0];
+    const maxPorCampo = (dados, campo) =>
+      [...dados].sort(
+        (a, b) => Number(b[campo] || 0) - Number(a[campo] || 0),
+      )[0];
 
-  const formatarVia = (via) =>
-    String(via || '')
-      .replaceAll('_', ' ')
-      .replace('Estrada nacional', 'Estr. Nacional')
-      .replace('Estrada municipal', 'Estr. Municipal')
-      .replace('Estrada regional', 'Estr. Regional')
-      .replace('Itinerário Complementar', 'IC')
-      .replace('Itinerário principal', 'IP');
+    const formatarVia = (via) =>
+      String(via || "")
+        .replaceAll("_", " ")
+        .replace("Estrada nacional", "Estr. Nacional")
+        .replace("Estrada municipal", "Estr. Municipal")
+        .replace("Estrada regional", "Estr. Regional")
+        .replace("Itinerário Complementar", "IC")
+        .replace("Itinerário principal", "IP");
 
-  const formatarHora = (hora) =>
-    String(hora || '')
-      .replaceAll('[', '')
-      .replaceAll(']', '')
-      .replace('-', '–');
+    const formatarHora = (hora) =>
+      String(hora || "")
+        .replaceAll("[", "")
+        .replaceAll("]", "")
+        .replace("-", "–");
 
-  const formatarDia = (dia) => {
-    if (dia === 'Sábado' || dia === 'Domingo') return dia;
-    return `${dia}-feira`;
+    const formatarDia = (dia) => {
+      if (dia === "Sábado" || dia === "Domingo") return dia;
+      return `${dia}-feira`;
+    };
+
+    const valorCSV = (valor) =>
+      `"${String(valor ?? "").replaceAll('"', '""')}"`;
+
+    const adicionarLinha = (valores) => {
+      linhas.push(valores.map(valorCSV).join(","));
+    };
+
+    const dadosMesAno = filtrarAno(dadosMes);
+    const dadosHoraAno = filtrarAno(dadosHora);
+    const dadosSemanaAno = filtrarAno(dadosSemana);
+    const dadosViaAno = filtrarAno(dadosVia);
+    const dadosNaturezaAno = filtrarAno(dadosNatureza);
+
+    const resumoAno = {
+      distritoMaisAcidentes: maxPorCampo(dadosAno, "acidentes"),
+      distritoMaisMortos: maxPorCampo(dadosAno, "mortos"),
+      horaMaisCritica: maxPorCampo(dadosHoraAno, "acidentes"),
+      diaMaisCritico: maxPorCampo(dadosSemanaAno, "acidentes"),
+      viaPredominante: maxPorCampo(dadosViaAno, "acidentes"),
+      naturezaMaisFrequente: maxPorCampo(dadosNaturezaAno, "acidentes"),
+    };
+
+    const linhas = [];
+
+    linhas.push(`Urban Mobility Insights - Dashboard ${anoSelecionado}`);
+    linhas.push("");
+
+    linhas.push("Resumo Geral");
+    adicionarLinha(["Indicador", "Valor"]);
+    statCards.forEach((card) => {
+      adicionarLinha([card.title, card.value]);
+    });
+
+    linhas.push("");
+    linhas.push("Resumo do Ano");
+    adicionarLinha(["Indicador", "Valor", "Total"]);
+    adicionarLinha([
+      "Distrito com mais acidentes",
+      resumoAno.distritoMaisAcidentes?.distrito,
+      resumoAno.distritoMaisAcidentes?.acidentes,
+    ]);
+    adicionarLinha([
+      "Distrito com mais vítimas mortais",
+      resumoAno.distritoMaisMortos?.distrito,
+      resumoAno.distritoMaisMortos?.mortos,
+    ]);
+    adicionarLinha([
+      "Dia da semana mais crítico",
+      formatarDia(resumoAno.diaMaisCritico?.dia_semana),
+      resumoAno.diaMaisCritico?.acidentes,
+    ]);
+    adicionarLinha([
+      "Período horário mais crítico",
+      formatarHora(resumoAno.horaMaisCritica?.hora),
+      resumoAno.horaMaisCritica?.acidentes,
+    ]);
+    adicionarLinha([
+      "Tipo de via predominante",
+      formatarVia(resumoAno.viaPredominante?.via),
+      resumoAno.viaPredominante?.acidentes,
+    ]);
+    adicionarLinha([
+      "Natureza mais frequente",
+      resumoAno.naturezaMaisFrequente?.tipo_acidente,
+      resumoAno.naturezaMaisFrequente?.acidentes,
+    ]);
+
+    linhas.push("");
+    linhas.push("Acidentes por Mês");
+    adicionarLinha([
+      "Mês",
+      "Acidentes",
+      "Vítimas Mortais",
+      "Feridos Graves",
+      "Feridos Leves",
+    ]);
+    dadosMesAno.forEach((item) => {
+      adicionarLinha([
+        item.mes,
+        item.acidentes,
+        item.mortos,
+        item.feridos_graves,
+        item.feridos_leves,
+      ]);
+    });
+
+    linhas.push("");
+    linhas.push("Acidentes por Hora do Dia");
+    adicionarLinha([
+      "Período Horário",
+      "Acidentes",
+      "Vítimas Mortais",
+      "Feridos Graves",
+      "Feridos Leves",
+    ]);
+    dadosHoraAno.forEach((item) => {
+      adicionarLinha([
+        formatarHora(item.hora),
+        item.acidentes,
+        item.mortos,
+        item.feridos_graves,
+        item.feridos_leves,
+      ]);
+    });
+
+    linhas.push("");
+    linhas.push("Acidentes por Dia da Semana");
+    adicionarLinha([
+      "Dia",
+      "Acidentes",
+      "Vítimas Mortais",
+      "Feridos Graves",
+      "Feridos Leves",
+    ]);
+    dadosSemanaAno.forEach((item) => {
+      adicionarLinha([
+        formatarDia(item.dia_semana),
+        item.acidentes,
+        item.mortos,
+        item.feridos_graves,
+        item.feridos_leves,
+      ]);
+    });
+
+    linhas.push("");
+    linhas.push("Acidentes por Tipo de Via");
+    adicionarLinha(["Tipo de Via", "Acidentes"]);
+    dadosViaAno.forEach((item) => {
+      adicionarLinha([formatarVia(item.via), item.acidentes]);
+    });
+
+    linhas.push("");
+    linhas.push("Natureza do Acidente");
+    adicionarLinha([
+      "Natureza",
+      "Acidentes",
+      "Vítimas Mortais",
+      "Feridos Graves",
+      "Feridos Leves",
+    ]);
+    dadosNaturezaAno.forEach((item) => {
+      adicionarLinha([
+        item.tipo_acidente,
+        item.acidentes,
+        item.mortos,
+        item.feridos_graves,
+        item.feridos_leves,
+      ]);
+    });
+
+    linhas.push("");
+    linhas.push("Distribuição Geográfica");
+    adicionarLinha([
+      "Distrito",
+      "Acidentes",
+      "Feridos Graves",
+      "Feridos Leves",
+      "Vítimas Mortais",
+    ]);
+    dadosAno.forEach((item) => {
+      adicionarLinha([
+        item.distrito,
+        item.acidentes,
+        item.feridos_graves,
+        item.feridos_leves,
+        item.mortos,
+      ]);
+    });
+
+    const csv = linhas.join("\n");
+
+    const blob = new Blob([`\uFEFF${csv}`], {
+      type: "text/csv;charset=utf-8;",
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = `urban_mobility_dashboard_${anoSelecionado}.csv`;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
   };
-
-  const valorCSV = (valor) => `"${String(valor ?? '').replaceAll('"', '""')}"`;
-
-  const adicionarLinha = (valores) => {
-    linhas.push(valores.map(valorCSV).join(','));
-  };
-
-  const dadosMesAno = filtrarAno(dadosMes);
-  const dadosHoraAno = filtrarAno(dadosHora);
-  const dadosSemanaAno = filtrarAno(dadosSemana);
-  const dadosViaAno = filtrarAno(dadosVia);
-  const dadosNaturezaAno = filtrarAno(dadosNatureza);
-
-  const resumoAno = {
-    distritoMaisAcidentes: maxPorCampo(dadosAno, 'acidentes'),
-    distritoMaisMortos: maxPorCampo(dadosAno, 'mortos'),
-    horaMaisCritica: maxPorCampo(dadosHoraAno, 'acidentes'),
-    diaMaisCritico: maxPorCampo(dadosSemanaAno, 'acidentes'),
-    viaPredominante: maxPorCampo(dadosViaAno, 'acidentes'),
-    naturezaMaisFrequente: maxPorCampo(dadosNaturezaAno, 'acidentes'),
-  };
-
-  const linhas = [];
-
-  linhas.push(`Urban Mobility Insights - Dashboard ${anoSelecionado}`);
-  linhas.push('');
-
-  linhas.push('Resumo Geral');
-  adicionarLinha(['Indicador', 'Valor']);
-  statCards.forEach((card) => {
-    adicionarLinha([card.title, card.value]);
-  });
-
-  linhas.push('');
-  linhas.push('Resumo do Ano');
-  adicionarLinha(['Indicador', 'Valor', 'Total']);
-  adicionarLinha([
-    'Distrito com mais acidentes',
-    resumoAno.distritoMaisAcidentes?.distrito,
-    resumoAno.distritoMaisAcidentes?.acidentes,
-  ]);
-  adicionarLinha([
-    'Distrito com mais vítimas mortais',
-    resumoAno.distritoMaisMortos?.distrito,
-    resumoAno.distritoMaisMortos?.mortos,
-  ]);
-  adicionarLinha([
-    'Dia da semana mais crítico',
-    formatarDia(resumoAno.diaMaisCritico?.dia_semana),
-    resumoAno.diaMaisCritico?.acidentes,
-  ]);
-  adicionarLinha([
-    'Período horário mais crítico',
-    formatarHora(resumoAno.horaMaisCritica?.hora),
-    resumoAno.horaMaisCritica?.acidentes,
-  ]);
-  adicionarLinha([
-    'Tipo de via predominante',
-    formatarVia(resumoAno.viaPredominante?.via),
-    resumoAno.viaPredominante?.acidentes,
-  ]);
-  adicionarLinha([
-    'Natureza mais frequente',
-    resumoAno.naturezaMaisFrequente?.tipo_acidente,
-    resumoAno.naturezaMaisFrequente?.acidentes,
-  ]);
-
-  linhas.push('');
-  linhas.push('Acidentes por Mês');
-  adicionarLinha(['Mês', 'Acidentes', 'Vítimas Mortais', 'Feridos Graves', 'Feridos Leves']);
-  dadosMesAno.forEach((item) => {
-    adicionarLinha([
-      item.mes,
-      item.acidentes,
-      item.mortos,
-      item.feridos_graves,
-      item.feridos_leves,
-    ]);
-  });
-
-  linhas.push('');
-  linhas.push('Acidentes por Hora do Dia');
-  adicionarLinha(['Período Horário', 'Acidentes', 'Vítimas Mortais', 'Feridos Graves', 'Feridos Leves']);
-  dadosHoraAno.forEach((item) => {
-    adicionarLinha([
-      formatarHora(item.hora),
-      item.acidentes,
-      item.mortos,
-      item.feridos_graves,
-      item.feridos_leves,
-    ]);
-  });
-
-  linhas.push('');
-  linhas.push('Acidentes por Dia da Semana');
-  adicionarLinha(['Dia', 'Acidentes', 'Vítimas Mortais', 'Feridos Graves', 'Feridos Leves']);
-  dadosSemanaAno.forEach((item) => {
-    adicionarLinha([
-      formatarDia(item.dia_semana),
-      item.acidentes,
-      item.mortos,
-      item.feridos_graves,
-      item.feridos_leves,
-    ]);
-  });
-
-  linhas.push('');
-  linhas.push('Acidentes por Tipo de Via');
-  adicionarLinha(['Tipo de Via', 'Acidentes']);
-  dadosViaAno.forEach((item) => {
-    adicionarLinha([formatarVia(item.via), item.acidentes]);
-  });
-
-  linhas.push('');
-  linhas.push('Natureza do Acidente');
-  adicionarLinha(['Natureza', 'Acidentes', 'Vítimas Mortais', 'Feridos Graves', 'Feridos Leves']);
-  dadosNaturezaAno.forEach((item) => {
-    adicionarLinha([
-      item.tipo_acidente,
-      item.acidentes,
-      item.mortos,
-      item.feridos_graves,
-      item.feridos_leves,
-    ]);
-  });
-
-  linhas.push('');
-  linhas.push('Distribuição Geográfica');
-  adicionarLinha(['Distrito', 'Acidentes', 'Feridos Graves', 'Feridos Leves', 'Vítimas Mortais']);
-  dadosAno.forEach((item) => {
-    adicionarLinha([
-      item.distrito,
-      item.acidentes,
-      item.feridos_graves,
-      item.feridos_leves,
-      item.mortos,
-    ]);
-  });
-
-  const csv = linhas.join('\n');
-
-  const blob = new Blob([`\uFEFF${csv}`], {
-    type: 'text/csv;charset=utf-8;',
-  });
-
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-
-  link.href = url;
-  link.download = `urban_mobility_dashboard_${anoSelecionado}.csv`;
-
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  URL.revokeObjectURL(url);
-};
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800">
@@ -296,19 +335,19 @@ export default function MobilidadeDashboard() {
 
           <nav className="px-3 py-5 space-y-2">
             {[
-              'Dashboard',
-              'Análise Temporal',
-              'Mapa de Acidentes',
-              'Tipos de Via',
-              'Sobre',
+              "Dashboard",
+              "Análise Temporal",
+              "Mapa de Acidentes",
+              "Tipos de Via",
+              "Sobre",
             ].map((item) => (
               <button
                 key={item}
                 onClick={() => setPaginaAtiva(item)}
                 className={`w-full rounded-xl px-4 py-3 text-left transition ${
                   paginaAtiva === item
-                    ? 'bg-slate-800 text-white'
-                    : 'text-slate-300 hover:bg-slate-900'
+                    ? "bg-slate-800 text-white"
+                    : "text-slate-300 hover:bg-slate-900"
                 }`}
               >
                 {item}
@@ -333,6 +372,8 @@ export default function MobilidadeDashboard() {
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
               </select>
             </div>
           </div>
@@ -354,19 +395,19 @@ export default function MobilidadeDashboard() {
 
                 <div className="flex items-center gap-6 mt-2">
                   <p className="text-slate-500 text-xl">
-                    {paginaAtiva === 'Dashboard' &&
-                      'Visão geral da sinistralidade rodoviária'}
-                    {paginaAtiva === 'Análise Temporal' &&
-                      'Análise dos acidentes ao longo do tempo'}
-                    {paginaAtiva === 'Mapa de Acidentes' &&
-                      'Distribuição geográfica da sinistralidade'}
-                    {paginaAtiva === 'Tipos de Via' &&
-                      'Análise da sinistralidade por categoria de via'}
-                    {paginaAtiva === 'Sobre' &&
-                      'Enquadramento, dados e tecnologias utilizadas no projeto'}
+                    {paginaAtiva === "Dashboard" &&
+                      "Visão geral da sinistralidade rodoviária"}
+                    {paginaAtiva === "Análise Temporal" &&
+                      "Análise dos acidentes ao longo do tempo"}
+                    {paginaAtiva === "Mapa de Acidentes" &&
+                      "Distribuição geográfica da sinistralidade"}
+                    {paginaAtiva === "Tipos de Via" &&
+                      "Análise da sinistralidade por categoria de via"}
+                    {paginaAtiva === "Sobre" &&
+                      "Enquadramento, dados e tecnologias utilizadas no projeto"}
                   </p>
 
-                  {paginaAtiva === 'Dashboard' && (
+                  {paginaAtiva === "Dashboard" && (
                     <button
                       onClick={handleExportCSV}
                       className="text-sm font-medium text-slate-700 hover:text-slate-950 transition"
@@ -377,24 +418,24 @@ export default function MobilidadeDashboard() {
                 </div>
               </div>
 
-              {paginaAtiva !== 'Sobre' && (
-  <div className="rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm min-w-[220px]">
-    <div className="text-sm text-slate-500">Ano selecionado</div>
+              {paginaAtiva !== "Sobre" && (
+                <div className="rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm min-w-[220px]">
+                  <div className="text-sm text-slate-500">Ano selecionado</div>
 
-    <div className="text-3xl font-bold text-slate-800">
-      {anoSelecionado}
-    </div>
+                  <div className="text-3xl font-bold text-slate-800">
+                    {anoSelecionado}
+                  </div>
 
-    {anoSelecionado === '2025' && (
-      <div className="mt-1 text-sm text-slate-500">
-        Dados disponíveis até setembro
-      </div>
-    )}
-  </div>
-)}
+                  {anoSelecionado === "2025" && (
+                    <div className="mt-1 text-sm text-slate-500">
+                      Dados disponíveis até setembro
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
-            {paginaAtiva === 'Dashboard' && (
+            {paginaAtiva === "Dashboard" && (
               <>
                 {/* Stat cards */}
                 <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -403,9 +444,7 @@ export default function MobilidadeDashboard() {
                       key={card.title}
                       className={`rounded-2xl border border-slate-200 p-5 shadow-sm ${card.bg}`}
                     >
-                      <div className="text-slate-600 text-sm">
-                        {card.title}
-                      </div>
+                      <div className="text-slate-600 text-sm">{card.title}</div>
                       <div className="mt-2 text-4xl font-semibold tracking-tight">
                         {card.value}
                       </div>
@@ -488,38 +527,42 @@ export default function MobilidadeDashboard() {
               </>
             )}
 
-            {paginaAtiva === 'Análise Temporal' && (
-              <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-                <div className="xl:col-span-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-3xl font-semibold">
-                    Acidentes por Mês
-                  </h3>
-                  <div className="mt-6">
-                    <MonthlyAccidentsChart ano={anoSelecionado} />
+            {paginaAtiva === "Análise Temporal" && (
+              <div className="space-y-4">
+                <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                  <div className="xl:col-span-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <h3 className="text-3xl font-semibold">
+                      Acidentes por Mês
+                    </h3>
+                    <div className="mt-6">
+                      <MonthlyAccidentsChart ano={anoSelecionado} />
+                    </div>
                   </div>
-                </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-3xl font-semibold">
-                    Acidentes por Hora do Dia
-                  </h3>
-                  <div className="mt-6">
-                    <HourlyAccidentsChart ano={anoSelecionado} />
+                  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <h3 className="text-3xl font-semibold">
+                      Acidentes por Hora do Dia
+                    </h3>
+                    <div className="mt-6">
+                      <HourlyAccidentsChart ano={anoSelecionado} />
+                    </div>
                   </div>
-                </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-3xl font-semibold">
-                    Acidentes por Dia da Semana
-                  </h3>
-                  <div className="mt-6">
-                    <WeekdayAccidentsChart ano={anoSelecionado} />
+                  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <h3 className="text-3xl font-semibold">
+                      Acidentes por Dia da Semana
+                    </h3>
+                    <div className="mt-6">
+                      <WeekdayAccidentsChart ano={anoSelecionado} />
+                    </div>
                   </div>
-                </div>
-              </section>
+                </section>
+
+                <TemporalRanking ano={anoSelecionado} />
+              </div>
             )}
 
-            {paginaAtiva === 'Mapa de Acidentes' && (
+            {paginaAtiva === "Mapa de Acidentes" && (
               <section className="space-y-4">
                 <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
                   {statCards.map((card) => (
@@ -527,9 +570,7 @@ export default function MobilidadeDashboard() {
                       key={card.title}
                       className={`rounded-2xl border border-slate-200 p-5 shadow-sm ${card.bg}`}
                     >
-                      <div className="text-slate-600 text-sm">
-                        {card.title}
-                      </div>
+                      <div className="text-slate-600 text-sm">{card.title}</div>
                       <div className="mt-2 text-4xl font-semibold tracking-tight">
                         {card.value}
                       </div>
@@ -586,7 +627,7 @@ export default function MobilidadeDashboard() {
               </section>
             )}
 
-            {paginaAtiva === 'Tipos de Via' && (
+            {paginaAtiva === "Tipos de Via" && (
               <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                 <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                   <h3 className="text-3xl font-semibold">
@@ -618,20 +659,22 @@ export default function MobilidadeDashboard() {
               </section>
             )}
 
-            {paginaAtiva === 'Sobre' && (
+            {paginaAtiva === "Sobre" && (
               <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="text-3xl font-semibold">Sobre o Projeto</h3>
 
                 <p className="mt-3 text-slate-600 leading-relaxed">
-                O Urban Mobility Insights é um dashboard interativo desenvolvido no âmbito 
-                do Projeto de Engenharia Informática, com o objetivo de apoiar a análise 
-                da sinistralidade rodoviária em Portugal.
+                  O Urban Mobility Insights é um dashboard interativo
+                  desenvolvido no âmbito do Projeto de Engenharia Informática,
+                  com o objetivo de apoiar a análise da sinistralidade
+                  rodoviária em Portugal.
                 </p>
 
                 <p className="mt-3 text-slate-600 leading-relaxed">
-                A aplicação permite explorar os dados através de visualizações temporais, 
-                geográficas e estatísticas, facilitando a identificação de padrões e  
-                a interpretação da informação disponibilizada.
+                  A aplicação permite explorar os dados através de visualizações
+                  temporais, geográficas e estatísticas, facilitando a
+                  identificação de padrões e a interpretação da informação
+                  disponibilizada.
                 </p>
 
                 <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -662,8 +705,9 @@ export default function MobilidadeDashboard() {
                 </div>
 
                 <p className="mt-4 text-sm text-slate-500">
-                  Nota: Os dados referentes a 2025 encontram-se disponíveis apenas até setembro. 
-                  Os meses posteriores não devem ser interpretados como ausência de acidentes.
+                  Nota: Os dados referentes a 2025 encontram-se disponíveis
+                  apenas até setembro. Os meses posteriores não devem ser
+                  interpretados como ausência de acidentes.
                 </p>
               </section>
             )}

@@ -1,15 +1,18 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
 export default function AccidentTypeChart({ ano }) {
   const [dadosTipo, setDadosTipo] = useState([]);
 
   useEffect(() => {
-    fetch('/data/acidentes_tipo_acidente.json')
+    fetch("/data/acidentes_tipo_acidente.json")
       .then((res) => res.json())
       .then((data) => setDadosTipo(data))
-      .catch((err) => console.error('Erro ao carregar acidentes_tipo_acidente.json:', err));
+      .catch((err) =>
+        console.error("Erro ao carregar acidentes_tipo_acidente.json:", err),
+      );
   }, []);
 
+  // Filtra e normaliza os dados do ano selecionado para apresentação no gráfico
   const dadosFiltrados = useMemo(() => {
     return dadosTipo
       .filter((item) => String(item.ano).trim() === String(ano).trim())
@@ -28,10 +31,10 @@ export default function AccidentTypeChart({ ano }) {
   const maximo = Math.max(...dadosFiltrados.map((item) => item.acidentes), 1);
 
   const formatarNumero = (valor) => {
-  return Number(valor || 0)
-    .toLocaleString('fr-FR')
-    .replace(/\u202f/g, ' ');
-};
+    return Number(valor || 0)
+      .toLocaleString("fr-FR")
+      .replace(/\u202f/g, " ");
+  };
 
   if (!dadosTipo.length) {
     return (

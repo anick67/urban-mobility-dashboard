@@ -1,30 +1,30 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
 const formatarNumero = (valor) => {
   return Number(valor || 0)
-    .toLocaleString('fr-FR')
-    .replace(/\u202f/g, ' ');
+    .toLocaleString("fr-FR")
+    .replace(/\u202f/g, " ");
 };
 
 const formatarVia = (via) => {
-  return String(via || '')
-    .replaceAll('_', ' ')
-    .replace('Estrada municipal', 'Estr. Municipal')
-    .replace('Estrada nacional', 'Estr. Nacional')
-    .replace('Estrada regional', 'Estr. Regional')
-    .replace('Itinerário Complementar', 'IC')
-    .replace('Itinerário principal', 'IP');
+  return String(via || "")
+    .replaceAll("_", " ")
+    .replace("Estrada municipal", "Estr. Municipal")
+    .replace("Estrada nacional", "Estr. Nacional")
+    .replace("Estrada regional", "Estr. Regional")
+    .replace("Itinerário Complementar", "IC")
+    .replace("Itinerário principal", "IP");
 };
 
 export default function RoadTypeInsights({ ano }) {
   const [dadosVia, setDadosVia] = useState([]);
 
   useEffect(() => {
-    fetch('/data/acidentes_tipo_via.json')
+    fetch("/data/acidentes_tipo_via.json")
       .then((res) => res.json())
       .then((data) => setDadosVia(data))
       .catch((err) =>
-        console.error('Erro ao carregar acidentes_tipo_via.json:', err)
+        console.error("Erro ao carregar acidentes_tipo_via.json:", err),
       );
   }, []);
 
@@ -40,12 +40,10 @@ export default function RoadTypeInsights({ ano }) {
 
   const resumo = useMemo(() => {
     const ordenarPorAcidentes = [...dadosAno].sort(
-      (a, b) => b.acidentes - a.acidentes
+      (a, b) => b.acidentes - a.acidentes,
     );
 
-    const ordenarPorMortos = [...dadosAno].sort(
-      (a, b) => b.mortos - a.mortos
-    );
+    const ordenarPorMortos = [...dadosAno].sort((a, b) => b.mortos - a.mortos);
 
     return {
       topAcidentes: ordenarPorAcidentes[0],
@@ -59,7 +57,9 @@ export default function RoadTypeInsights({ ano }) {
   }
 
   if (!dadosAno.length) {
-    return <div className="text-slate-500">Sem dados para o ano selecionado.</div>;
+    return (
+      <div className="text-slate-500">Sem dados para o ano selecionado.</div>
+    );
   }
 
   return (
@@ -108,7 +108,6 @@ export default function RoadTypeInsights({ ano }) {
                   <div className="font-semibold text-slate-800">
                     {formatarVia(item.via)}
                   </div>
-                  <div className="text-xs text-slate-500">Ano {ano}</div>
                 </div>
               </div>
 

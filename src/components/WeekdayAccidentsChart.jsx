@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -7,46 +7,49 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
+} from "recharts";
 
 const ORDEM_DIAS = [
-  'Segunda',
-  'Terça',
-  'Quarta',
-  'Quinta',
-  'Sexta',
-  'Sábado',
-  'Domingo',
+  "Segunda",
+  "Terça",
+  "Quarta",
+  "Quinta",
+  "Sexta",
+  "Sábado",
+  "Domingo",
 ];
 
 const LABELS_DIAS = {
-  Segunda: 'Seg',
-  Terça: 'Ter',
-  Quarta: 'Qua',
-  Quinta: 'Qui',
-  Sexta: 'Sex',
-  Sábado: 'Sáb',
-  Domingo: 'Dom',
+  Segunda: "Seg",
+  Terça: "Ter",
+  Quarta: "Qua",
+  Quinta: "Qui",
+  Sexta: "Sex",
+  Sábado: "Sáb",
+  Domingo: "Dom",
 };
 
 export default function WeekdayAccidentsChart({ ano }) {
   const [dadosDia, setDadosDia] = useState([]);
 
   useEffect(() => {
-    fetch('/data/acidentes_dia_semana.json')
+    fetch("/data/acidentes_dia_semana.json")
       .then((res) => res.json())
       .then((data) => setDadosDia(data))
-      .catch((err) => console.error('Erro ao carregar acidentes_dia_semana.json:', err));
+      .catch((err) =>
+        console.error("Erro ao carregar acidentes_dia_semana.json:", err),
+      );
   }, []);
 
+  // Mantém a ordem cronológica dos dias da semana, preenchendo valores em falta com zero
   const dadosFiltrados = useMemo(() => {
     const dadosAno = dadosDia.filter(
-      (item) => String(item.ano).trim() === String(ano).trim()
+      (item) => String(item.ano).trim() === String(ano).trim(),
     );
 
     return ORDEM_DIAS.map((dia) => {
       const registo = dadosAno.find(
-        (item) => String(item.dia_semana).trim() === dia
+        (item) => String(item.dia_semana).trim() === dia,
       );
 
       return {
@@ -61,10 +64,10 @@ export default function WeekdayAccidentsChart({ ano }) {
   }, [dadosDia, ano]);
 
   const formatarNumero = (valor) => {
-  return Number(valor || 0)
-    .toLocaleString('fr-FR')
-    .replace(/\u202f/g, ' ');
-};
+    return Number(valor || 0)
+      .toLocaleString("fr-FR")
+      .replace(/\u202f/g, " ");
+  };
 
   if (!dadosDia.length) {
     return (
@@ -84,41 +87,37 @@ export default function WeekdayAccidentsChart({ ano }) {
           <CartesianGrid stroke="#e2e8f0" vertical={false} />
           <XAxis
             dataKey="label"
-            tick={{ fill: '#64748b', fontSize: 12 }}
+            tick={{ fill: "#64748b", fontSize: 12 }}
             axisLine={false}
             tickLine={false}
           />
           <YAxis
             tickFormatter={formatarNumero}
-            tick={{ fill: '#64748b', fontSize: 12 }}
+            tick={{ fill: "#64748b", fontSize: 12 }}
             axisLine={false}
             tickLine={false}
             width={60}
           />
           <Tooltip
             cursor={false}
-            formatter={(value) => [formatarNumero(value), 'Acidentes']}
+            formatter={(value) => [formatarNumero(value), "Acidentes"]}
             labelFormatter={(label, payload) => {
               if (!payload || !payload.length) return label;
               return payload[0].payload.dia;
             }}
             contentStyle={{
-              borderRadius: '12px',
-              border: '1px solid #e2e8f0',
-              backgroundColor: '#ffffff',
-              color: '#0f172a',
-              padding: '10px 12px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+              borderRadius: "12px",
+              border: "1px solid #e2e8f0",
+              backgroundColor: "#ffffff",
+              color: "#0f172a",
+              padding: "10px 12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
             }}
             itemStyle={{
-              color: '#0f172a',
+              color: "#0f172a",
             }}
           />
-          <Bar
-            dataKey="acidentes"
-            radius={[10, 10, 0, 0]}
-            fill="#59a8b5"
-          />
+          <Bar dataKey="acidentes" radius={[10, 10, 0, 0]} fill="#59a8b5" />
         </BarChart>
       </ResponsiveContainer>
     </div>
