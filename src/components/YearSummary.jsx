@@ -149,7 +149,9 @@ export default function YearSummary({ ano }) {
         </div>
 
         <div className="rounded-xl bg-orange-50 p-4">
-          <div className="text-sm text-slate-500">Tipo de via predominante</div>
+          <div className="text-sm text-slate-500">
+            Tipo de via com mais acidentes
+          </div>
           <div className="mt-1 text-xl font-semibold text-slate-800">
             {formatarVia(resumo.viaPredominante?.via)}
           </div>
@@ -159,7 +161,9 @@ export default function YearSummary({ ano }) {
         </div>
 
         <div className="rounded-xl bg-indigo-50 p-4">
-          <div className="text-sm text-slate-500">Natureza mais frequente</div>
+          <div className="text-sm text-slate-500">
+            Natureza do acidente mais frequente
+          </div>
           <div className="mt-1 text-xl font-semibold text-slate-800">
             {resumo.naturezaMaisFrequente?.tipo_acidente}
           </div>

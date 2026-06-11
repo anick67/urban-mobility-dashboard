@@ -54,15 +54,18 @@ function RankingCard({ titulo, dados, campoNome, tipo }) {
 export default function TemporalRanking({ ano }) {
   const [dadosMes, setDadosMes] = useState([]);
   const [dadosHora, setDadosHora] = useState([]);
+  const [dadosSemana, setDadosSemana] = useState([]);
 
   useEffect(() => {
     Promise.all([
       fetch("/data/acidentes_mes.json").then((res) => res.json()),
       fetch("/data/acidentes_hora.json").then((res) => res.json()),
+      fetch("/data/acidentes_dia_semana.json").then((res) => res.json()),
     ])
-      .then(([mes, hora]) => {
+      .then(([mes, hora, semana]) => {
         setDadosMes(mes);
         setDadosHora(hora);
+        setDadosSemana(semana);
       })
       .catch((err) => console.error("Erro ao carregar ranking temporal:", err));
   }, []);
@@ -90,7 +93,18 @@ export default function TemporalRanking({ ano }) {
       .slice(0, 3);
   }, [dadosHora, ano]);
 
-  if (!dadosMes.length || !dadosHora.length) {
+  const topDias = useMemo(() => {
+    return dadosSemana
+      .filter((item) => String(item.ano).trim() === String(ano).trim())
+      .map((item) => ({
+        ...item,
+        acidentes: Number(item.acidentes || 0),
+      }))
+      .sort((a, b) => b.acidentes - a.acidentes)
+      .slice(0, 3);
+  }, [dadosSemana, ano]);
+
+  if (!dadosMes.length || !dadosHora.length || !dadosSemana.length) {
     return (
       <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm text-slate-500">
         A carregar resumo temporal...
@@ -99,7 +113,7 @@ export default function TemporalRanking({ ano }) {
   }
 
   return (
-    <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+    <section className="grid grid-cols-1 xl:grid-cols-3 gap-4">
       <RankingCard
         titulo="Top 3 Meses com Mais Acidentes"
         dados={topMeses}
@@ -112,6 +126,13 @@ export default function TemporalRanking({ ano }) {
         dados={topHoras}
         campoNome="hora"
         tipo="hora"
+      />
+
+      <RankingCard
+        titulo="Top 3 Dias da Semana com Mais Acidentes"
+        dados={topDias}
+        campoNome="dia_semana"
+        tipo="dia"
       />
     </section>
   );

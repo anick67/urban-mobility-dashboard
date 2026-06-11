@@ -80,18 +80,18 @@ export default function HourlyAccidentsChart({ ano }) {
 
   if (!dadosHora.length) {
     return (
-      <div className="h-[240px] flex items-center justify-center text-slate-500">
+      <div className="h-[260px] flex items-center justify-center text-slate-500">
         A carregar gráfico...
       </div>
     );
   }
 
   return (
-    <div className="h-[240px] w-full">
+    <div className="h-[290px] w-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={dadosFiltrados}
-          margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+          margin={{ top: 25, right: 10, left: 0, bottom: 0 }}
         >
           <CartesianGrid stroke="#e2e8f0" vertical={false} />
           <XAxis

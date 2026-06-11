@@ -117,7 +117,12 @@ export default function WeekdayAccidentsChart({ ano }) {
               color: "#0f172a",
             }}
           />
-          <Bar dataKey="acidentes" radius={[10, 10, 0, 0]} fill="#59a8b5" />
+          <Bar
+            dataKey="acidentes"
+            fill="#5ea3b0"
+            radius={[8, 8, 0, 0]}
+            barSize={55}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

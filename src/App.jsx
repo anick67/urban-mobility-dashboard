@@ -314,26 +314,28 @@ export default function MobilidadeDashboard() {
     <div className="min-h-screen bg-slate-100 text-slate-800">
       <div className="flex min-h-screen">
         {/* Sidebar */}
-        <aside className="w-[320px] shrink-0 bg-slate-950 text-white flex flex-col">
-          <div className="px-6 py-7 border-b border-white/10">
-            <div className="flex items-center gap-4">
+        <aside className="sticky top-0 h-screen w-[320px] shrink-0 bg-slate-950 text-white flex flex-col">
+          <div className="px-6 py-8 border-b border-white/10">
+            <div className="flex flex-col items-center text-center">
               <img
-                src="/logo.png"
+                src="/logo_nolettring.png"
                 alt="Logo Urban Mobility Insights"
-                className="h-16 w-auto"
+                className="h-28 w-auto"
               />
-              <div>
-                <h1 className="text-xl font-bold leading-tight">
-                  <span className="text-emerald-400">MOBILIDADE</span> URBANA
-                </h1>
-                <p className="text-slate-300 text-sm">
-                  Visualizing data for safer mobility
-                </p>
-              </div>
+
+              <h1 className="mt-3 text-2xl font-bold leading-tight">
+                <span className="text-emerald-400">URBAN MOBILITY</span>
+                <br />
+                INSIGHTS
+              </h1>
+
+              <p className="mt-1 text-sm text-slate-300">
+                Visualizing data for safer mobility
+              </p>
             </div>
           </div>
 
-          <nav className="px-3 py-5 space-y-2">
+          <nav className="px-3 pt-10 pb-5 space-y-2">
             {[
               "Dashboard",
               "Análise Temporal",
@@ -344,7 +346,7 @@ export default function MobilidadeDashboard() {
               <button
                 key={item}
                 onClick={() => setPaginaAtiva(item)}
-                className={`w-full rounded-xl px-4 py-3 text-left transition ${
+                className={`w-full rounded-xl px-4 py-3 text-left text-[17px] transition ${
                   paginaAtiva === item
                     ? "bg-slate-800 text-white"
                     : "text-slate-300 hover:bg-slate-900"
@@ -355,7 +357,7 @@ export default function MobilidadeDashboard() {
             ))}
           </nav>
 
-          <div className="mx-4 my-3 h-px bg-white/10" />
+          <div className="mx-4 my-3 h-px bg-white/25" />
 
           <div className="px-6 py-4 flex-1">
             <div className="flex items-center gap-2 mb-6">
@@ -378,8 +380,8 @@ export default function MobilidadeDashboard() {
             </div>
           </div>
 
-          <div className="px-6 py-5 border-t border-white/10 text-slate-400 text-sm">
-            Projeto de Engenharia Informática
+          <div className="px-6 py-5 border-t border-white/10 text-slate-500 text-sm">
+            Data source: ANSR
           </div>
         </aside>
 
@@ -484,15 +486,25 @@ export default function MobilidadeDashboard() {
                     <h3 className="text-3xl font-semibold">
                       Acidentes por Hora do Dia
                     </h3>
-                    <div className="mt-6">
+
+                    <p className="mt-1 text-slate-500">
+                      Distribuição dos acidentes por período horário
+                    </p>
+
+                    <div className="mt-8">
                       <HourlyAccidentsChart ano={anoSelecionado} />
                     </div>
                   </div>
 
                   <div className="xl:col-span-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                     <h3 className="text-3xl font-semibold">
-                      Acidentes por Tipo de Via
+                      Acidentes por Via
                     </h3>
+
+                    <p className="mt-1 text-slate-500">
+                      Distribuição dos acidentes por categoria
+                    </p>
+
                     <RoadTypeChart ano={anoSelecionado} />
                   </div>
 
@@ -665,9 +677,10 @@ export default function MobilidadeDashboard() {
 
                 <p className="mt-3 text-slate-600 leading-relaxed">
                   O Urban Mobility Insights é um dashboard interativo
-                  desenvolvido no âmbito do Projeto de Engenharia Informática,
-                  com o objetivo de apoiar a análise da sinistralidade
-                  rodoviária em Portugal.
+                  desenvolvido no âmbito da unidade curricular Projeto de
+                  Engenharia Informática, com o objetivo de apoiar a análise da
+                  sinistralidade rodoviária em Portugal através da exploração
+                  visual de dados estatísticos e geográficos.
                 </p>
 
                 <p className="mt-3 text-slate-600 leading-relaxed">

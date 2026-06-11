@@ -34,6 +34,8 @@ export default function RoadTypeInsights({ ano }) {
       .map((item) => ({
         ...item,
         acidentes: Number(item.acidentes || 0),
+        feridos_leves: Number(item.feridos_leves || 0),
+        feridos_graves: Number(item.feridos_graves || 0),
         mortos: Number(item.mortos || 0),
       }));
   }, [dadosVia, ano]);
@@ -43,10 +45,20 @@ export default function RoadTypeInsights({ ano }) {
       (a, b) => b.acidentes - a.acidentes,
     );
 
+    const ordenarPorFeridosLeves = [...dadosAno].sort(
+      (a, b) => b.feridos_leves - a.feridos_leves,
+    );
+
+    const ordenarPorFeridosGraves = [...dadosAno].sort(
+      (a, b) => b.feridos_graves - a.feridos_graves,
+    );
+
     const ordenarPorMortos = [...dadosAno].sort((a, b) => b.mortos - a.mortos);
 
     return {
       topAcidentes: ordenarPorAcidentes[0],
+      topFeridosLeves: ordenarPorFeridosLeves[0],
+      topFeridosGraves: ordenarPorFeridosGraves[0],
       topMortos: ordenarPorMortos[0],
       top3: ordenarPorAcidentes.slice(0, 3),
     };
@@ -64,50 +76,68 @@ export default function RoadTypeInsights({ ano }) {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-xl bg-emerald-50 p-5">
-        <div className="text-sm text-slate-500">
-          Tipo de via com mais acidentes
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rounded-xl bg-emerald-50 p-4">
+          <div className="text-sm text-slate-500">Mais acidentes</div>
+          <div className="mt-2 text-xl font-semibold text-slate-800">
+            {formatarVia(resumo.topAcidentes?.via)}
+          </div>
+          <div className="text-slate-600">
+            {formatarNumero(resumo.topAcidentes?.acidentes)} acidentes
+          </div>
         </div>
-        <div className="mt-2 text-2xl font-semibold text-slate-800">
-          {formatarVia(resumo.topAcidentes?.via)}
+
+        <div className="rounded-xl bg-blue-50 p-4">
+          <div className="text-sm text-slate-500">Mais feridos leves</div>
+          <div className="mt-2 text-xl font-semibold text-slate-800">
+            {formatarVia(resumo.topFeridosLeves?.via)}
+          </div>
+          <div className="text-slate-600">
+            {formatarNumero(resumo.topFeridosLeves?.feridos_leves)} feridos
+            leves
+          </div>
         </div>
-        <div className="text-slate-600">
-          {formatarNumero(resumo.topAcidentes?.acidentes)} acidentes
+
+        <div className="rounded-xl bg-orange-50 p-4">
+          <div className="text-sm text-slate-500">Mais feridos graves</div>
+          <div className="mt-2 text-xl font-semibold text-slate-800">
+            {formatarVia(resumo.topFeridosGraves?.via)}
+          </div>
+          <div className="text-slate-600">
+            {formatarNumero(resumo.topFeridosGraves?.feridos_graves)} feridos
+            graves
+          </div>
+        </div>
+
+        <div className="rounded-xl bg-rose-50 p-4">
+          <div className="text-sm text-slate-500">Mais vítimas mortais</div>
+          <div className="mt-2 text-xl font-semibold text-slate-800">
+            {formatarVia(resumo.topMortos?.via)}
+          </div>
+          <div className="text-slate-600">
+            {formatarNumero(resumo.topMortos?.mortos)} vítimas mortais
+          </div>
         </div>
       </div>
 
-      <div className="rounded-xl bg-rose-50 p-5">
-        <div className="text-sm text-slate-500">
-          Tipo de via com mais vítimas mortais
-        </div>
-        <div className="mt-2 text-2xl font-semibold text-slate-800">
-          {formatarVia(resumo.topMortos?.via)}
-        </div>
-        <div className="text-slate-600">
-          {formatarNumero(resumo.topMortos?.mortos)} vítimas mortais
-        </div>
-      </div>
+      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 className="text-2xl font-semibold">
+          Top 3 Tipos de Via com Mais Acidentes
+        </h3>
 
-      <div className="rounded-xl bg-slate-50 p-5">
-        <div className="text-sm text-slate-500 mb-4">
-          Top 3 tipos de via por acidentes
-        </div>
-
-        <div className="space-y-3">
+        <div className="mt-5 space-y-3">
           {resumo.top3.map((item, index) => (
             <div
               key={item.via}
-              className="flex items-center justify-between rounded-xl bg-white px-4 py-3"
+              className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3"
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white">
                   {index + 1}
                 </div>
 
-                <div>
-                  <div className="font-semibold text-slate-800">
-                    {formatarVia(item.via)}
-                  </div>
+                <div className="font-semibold text-slate-800">
+                  {formatarVia(item.via)}
                 </div>
               </div>
 

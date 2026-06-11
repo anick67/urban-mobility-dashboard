@@ -45,7 +45,7 @@ export default function AccidentTypeChart({ ano }) {
   }
 
   return (
-    <div className="mt-6 space-y-5">
+    <div className="mt-12 space-y-10">
       {dadosFiltrados.map((item) => {
         const percentagem = total > 0 ? (item.acidentes / total) * 100 : 0;
         const largura = maximo > 0 ? (item.acidentes / maximo) * 100 : 0;
@@ -67,7 +67,7 @@ export default function AccidentTypeChart({ ano }) {
               </div>
             </div>
 
-            <div className="h-3 rounded-full bg-slate-100 overflow-hidden">
+            <div className="h-4 rounded-full bg-slate-100 overflow-hidden">
               <div
                 className="h-full rounded-full bg-indigo-500"
                 style={{ width: `${largura}%` }}

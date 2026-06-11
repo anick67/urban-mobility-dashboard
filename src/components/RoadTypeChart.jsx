@@ -86,7 +86,7 @@ export default function RoadTypeChart({
     >
       <div
         className={`relative shrink-0 ${
-          isDetalhado ? "h-64 w-64" : "h-48 w-48"
+          isDetalhado ? "h-64 w-64" : "h-40 w-40"
         }`}
       >
         <ResponsiveContainer width="100%" height="100%">
@@ -95,8 +95,8 @@ export default function RoadTypeChart({
               data={dadosFiltrados}
               dataKey="acidentes"
               nameKey="via"
-              innerRadius={isDetalhado ? 72 : 58}
-              outerRadius={isDetalhado ? 118 : 88}
+              innerRadius={isDetalhado ? 72 : 48}
+              outerRadius={isDetalhado ? 118 : 74}
               paddingAngle={2}
               isAnimationActive={false}
             >
@@ -150,7 +150,7 @@ export default function RoadTypeChart({
 
       <div
         className={
-          isDetalhado ? "w-full max-w-md space-y-3" : "mt-5 w-full space-y-2"
+          isDetalhado ? "w-full max-w-md space-y-3" : "mt-4 w-full space-y-1.5"
         }
       >
         {dadosFiltrados.map((item) => {
