@@ -21,6 +21,10 @@ export default function MobilidadeDashboard() {
   const [gravidadeSelecionada, setGravidadeSelecionada] = useState("acidentes");
   const [paginaAtiva, setPaginaAtiva] = useState("Dashboard");
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [paginaAtiva]);
+
   // Carrega todos os ficheiros JSON utilizados nas visualizações do dashboard
   useEffect(() => {
     Promise.all([
@@ -314,7 +318,7 @@ export default function MobilidadeDashboard() {
     <div className="min-h-screen bg-slate-100 text-slate-800">
       <div className="flex min-h-screen">
         {/* Sidebar */}
-        <aside className="sticky top-0 h-screen w-[320px] shrink-0 bg-slate-950 text-white flex flex-col">
+        <aside className="sticky top-0 h-screen w-[320px] shrink-0 overflow-y-auto bg-slate-950 text-white flex flex-col">
           <div className="px-6 py-8 border-b border-white/10">
             <div className="flex flex-col items-center text-center">
               <img
