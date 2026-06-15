@@ -80,7 +80,7 @@ export default function RoadTypeChart({
     <div
       className={
         isDetalhado
-          ? "mt-6 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8"
+          ? "mt-6 flex flex-col 2xl:flex-row 2xl:items-center 2xl:justify-center gap-8"
           : "mt-6 flex flex-col items-center"
       }
     >
