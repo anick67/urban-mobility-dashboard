@@ -1,16 +1,46 @@
-# React + Vite
+# Urban Mobility Insights
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dashboard interativo para visualização e análise de dados de sinistralidade rodoviária em Portugal Continental.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto tem como objetivo disponibilizar uma plataforma web que permita explorar dados de acidentes rodoviários através de mapas interativos, gráficos estatísticos e indicadores de síntese, facilitando a análise da sinistralidade rodoviária.
 
-## React Compiler
+## Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS
+- Leaflet
+- Recharts
+- JSON
+- GeoJSON
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Visualização de indicadores gerais de sinistralidade;
+- Mapa interativo por distrito;
+- Análise temporal por mês, dia da semana e período horário;
+- Análise por tipo de via;
+- Exportação de dados para CSV;
+- Seleção dinâmica do ano de análise.
+
+## Fonte dos dados
+
+- Autoridade Nacional de Segurança Rodoviária (ANSR)
+- Direção-Geral do Território (DGT) – Carta Administrativa Oficial de Portugal (CAOP)
+
+## Execução local
+
+```bash
+npm install
+npm run dev
+```
+
+## Aplicação online
+
+[Aceder ao dashboard](https://urban-mobility-dashboard-mauve.vercel.app/)
+
+## Sobre o projeto
+
+Projeto desenvolvido no âmbito da unidade curricular de Projeto da Licenciatura em Engenharia Informática.
