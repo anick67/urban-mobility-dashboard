@@ -88,13 +88,13 @@ export default function RoadTypeInsights({ ano }) {
         </div>
 
         <div className="rounded-xl bg-blue-50 p-4">
-          <div className="text-sm text-slate-500">Mais feridos leves</div>
+          <div className="text-sm text-slate-500">Mais feridos ligeiros</div>
           <div className="mt-2 text-xl font-semibold text-slate-800">
             {formatarVia(resumo.topFeridosLeves?.via)}
           </div>
           <div className="text-slate-600">
             {formatarNumero(resumo.topFeridosLeves?.feridos_leves)} feridos
-            leves
+            ligeiros
           </div>
         </div>
 

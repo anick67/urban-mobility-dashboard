@@ -106,7 +106,7 @@ export default function DistrictRanking({ ano }) {
       />
 
       <RankingCard
-        title="Top 3 Distritos com Mais Feridos Leves"
+        title="Top 3 Distritos com Mais Feridos Ligeiros"
         data={topFeridosLeves}
         field="feridos_leves"
         suffix="feridos leves"

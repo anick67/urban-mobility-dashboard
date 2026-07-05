@@ -623,7 +623,7 @@ export default function MobilidadeDashboard() {
                         className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm"
                       >
                         <option value="acidentes">Acidentes</option>
-                        <option value="feridos_leves">Feridos leves</option>
+                        <option value="feridos_leves">Feridos ligeiros</option>
                         <option value="feridos_graves">Feridos graves</option>
                         <option value="mortos">Vítimas mortais</option>
                       </select>
